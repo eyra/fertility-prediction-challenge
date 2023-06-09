@@ -1,18 +1,16 @@
 """
-This script is used to generate the outcome variable for the data set.
+This an example script to generate the outcome variable for the dataset.
 
-The script should be modified to implement your own logic for generating 
-the outcome variable. 
+This script should be modified to prepare your own submission that predicts 
+the outcome for the benchmark challenge by changing the process function. 
 
-When chaning the script focus on the process function. The process function
-takes a CSV reader and CSV writer object. 
+The process function takes a CSV reader and CSV writer object. The reader object 
+is used to read the input. Iterating over it yields a dictionary for each row. 
+The writer object is used to write the output. 
 
-The reader object is used to read the input. Iterating over it yields a 
-dictionary for each row. The writer object is used to write the output. 
-
-The writer object is a DictWriter object. It is already configured with the
+The writer object is a DictWriter object, which is pre-configured with the
 correct columns. Use the writerow method to create the expected results using
-as dictionary with the nomem_encr and outcome keys.
+a dictionary with the nomem_encr and outcome keys.
 
 The script can be run from the command line using the following command:
 
