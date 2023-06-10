@@ -3,8 +3,10 @@ FROM continuumio/miniconda3:23.3.1-0
 COPY environment.yml /
 RUN conda env create -f /environment.yml
 
-COPY data /data
-COPY script.py /
+RUN mkdir /src
 
-ENTRYPOINT [ "conda", "run", "-n", "eyra-rank", "python", "/script.py" ]
-CMD ["/data/test_data_liss_2_subjects.csv"]
+COPY data /data
+COPY src/script.py /src
+
+ENTRYPOINT ["conda", "run", "-n", "eyra-rank", "python", "/src/script.py"]
+CMD ["predict", "/data/test_data_liss_2_subjects.csv"]

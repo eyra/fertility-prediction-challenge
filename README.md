@@ -1,17 +1,19 @@
 # Fertility Benchmark Submission
+
 This repository is a template that can be used to submit your Python method for the Fertility prediction benchmark challenge. To participate in the challenge walk through the following steps:
 
 1. Register and sign in on this website [link will be added] using your institution email address.
-2. Download the participant data to tune and test your method. 
-3. Fork this repository as explained in the [getting started](https://github.com/eyra/eyra-rank-template/edit/main/README.md#getting-started) section. 
+2. Download the participant data to tune and test your method.
+3. Fork this repository as explained in the [getting started](https://github.com/eyra/eyra-rank-template/edit/main/README.md#getting-started) section.
 4. Change the algorithm.py file to include your method. Make sure that the expected input and output data format does not change.
 5. Add dependencies when required as explained [here](https://github.com/eyra/eyra-rank-template/edit/main/README.md#dependencies).
-6. Test your implementation as explained [here](https://github.com/eyra/eyra-rank-template/edit/main/README.md#testing). 
+6. Test your implementation as explained [here](https://github.com/eyra/eyra-rank-template/edit/main/README.md#testing).
 7. Submit your method as explained [here](https://github.com/eyra/eyra-rank-template/edit/main/README.md#submitting-your-method).
 
-After submission, your method will be run on the holdout dataset and the outcomes of your method will be compared to the ground truth in the holdout dataset with respect to: 
+After submission, your method will be run on the holdout dataset and the outcomes of your method will be compared to the ground truth in the holdout dataset with respect to:
+
 - [accuracy](https://developers.google.com/machine-learning/crash-course/classification/accuracy)
-- [precision](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall), [recall](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall) and [F1](https://www.educative.io/answers/what-is-the-f1-score) for the positive class (having a child in the 2020-2022). 
+- [precision](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall), [recall](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall) and [F1](https://www.educative.io/answers/what-is-the-f1-score) for the positive class (having a child in the 2020-2022).
 
 ## Getting Started
 
@@ -64,7 +66,7 @@ This should run the script with the example data. You can run it against other d
 using:
 
 ```bash
-docker run -v "$(pwd)/data:/data" eyra-rank /data/test_data_liss_2_subjects.csv
+docker run -v "$(pwd)/data:/data"  eyra-rank predict /data/test_data_liss_2_subjects.csv
 ```
 
 ### Miniconda
@@ -76,11 +78,26 @@ conda env create -f environment.yml --no-default-packages
 conda activate eyra-rank
 ```
 
-Then, run the algorithm.py script:
+Then, run the script:
 
 ```bash
-python algorithm.py
+python3 script.py predict
 ```
+
+## Scoring
+
+To score your predictions you can use the script in scoring mode. Run the score
+part of the script using the following command:
+
+```bash
+python3 script.py score predictions.csv data/test_data_liss_2_subjects_ground_truth.csv
+```
+
+Replace `predictions.csv` and `data/test_data_liss_2_subjects_ground_truth.csv`
+with the actual paths to your prediction and ground truth files.
+
+After running the command, the output will show the accuracy, precision, recall,
+and F1 score of the predictions.
 
 ## Submitting your method
 
@@ -96,4 +113,5 @@ Follow the instructions below to submit your method:
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
 # eyra-fertility-prediction-challenge
