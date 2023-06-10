@@ -1,5 +1,5 @@
 """
-This an example script to generate the outcome variable for the dataset.
+This is an example script to generate the outcome variable for the dataset.
 
 This script should be modified to prepare your own submission that predicts 
 the outcome for the benchmark challenge by changing the process function. 
@@ -9,7 +9,7 @@ is used to read the input. Iterating over it yields a dictionary for each row.
 The writer object is used to write the output. 
 
 The writer object is a DictWriter object, which is pre-configured with the
-correct columns. Use the writerow method to create the expected results using
+correct columns. Use the writerow method to write the expected results using
 a dictionary with the nomem_encr and outcome keys.
 
 The script can be run from the command line using the following command:
@@ -38,9 +38,11 @@ parser.add_argument(
 def process(reader, writer):
     """Process the input CSV file and write the output CSV file."""
 
-    # Change the following code to implement your own logic. The current implementation 
-    # uses the year variable to generate the outcome variable. The outcome variable 
-    # is 1 if the year is odd and 0 if the year is even.
+    # Add your method here.  
+
+    # Use the code below to write the outcome you predict per nomem_encr.
+    # The implementation below is a dummy method predicting 1 if the year is odd
+    # and 0 if the year is even. Replace this with the outcome from your method.
     for row in reader:
         writer.writerow(
             {"nomem_encr": row["nomem_encr"], "outcome": int(int(row["year"]) % 2)}
