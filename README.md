@@ -127,7 +127,7 @@ Follow the instructions below to submit your method:
 6. When you click "Submit", your latest commit in this repository will serve as your submission to the benchmark challenge.
 
 ## License
-This project is licensed under the terms of the MIT license - see the LICENSE file for details.
+This project is licensed under the terms of the [MIT license](https://github.com/eyra/fertility-prediction-challenge/blob/master/LICENSE).
 
 ## Acknowledgements
 
