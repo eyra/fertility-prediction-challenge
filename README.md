@@ -82,7 +82,7 @@ This should run the script with the example data. You can run it against other d
 using:
 
 ```bash
-docker run -v "$(pwd)/data:/data" eyra-rank /data/test_data_liss_2_subjects.csv
+docker run -v "$(pwd)/data:/data"  eyra-rank predict /data/test_data_liss_2_subjects.csv
 ```
 
 ##### Miniconda
@@ -94,11 +94,26 @@ conda env create -f environment.yml --no-default-packages
 conda activate eyra-rank
 ```
 
-Then, run script.py:
+Then, run the script:
 
 ```bash
-python script.py
+python3 script.py predict
 ```
+
+#### Scoring
+
+To score your predictions you can use the script in scoring mode. Run the score
+part of the script using the following command:
+
+```bash
+python3 script.py score predictions.csv data/test_data_liss_2_subjects_ground_truth.csv
+```
+
+Replace `predictions.csv` and `data/test_data_liss_2_subjects_ground_truth.csv`
+with the actual paths to your prediction and ground truth files.
+
+After running the command, the output will show the accuracy, precision, recall,
+and F1 score of the predictions.
 
 #### Submitting your method
 
@@ -112,10 +127,8 @@ Follow the instructions below to submit your method:
 6. When you click "Submit", your latest commit in this repository will serve as your submission to the benchmark challenge.
 
 ## License
-
 This project is licensed under the terms of the MIT license - see the LICENSE file for details.
 
 ## Acknowledgements
 
 The code in this repository is developed by [Eyra](https://eyra.co/) as part of the benchmark infrastructure starter kit project funded by [ODISSEI](https://odissei-data.nl/en/) and the [NWO VIDI grant](https://www.rug.nl/gmw/news/210714-vidi-gert-stulp?lang=en) awarded to Gert Stulp. The [LISS panel](https://www.centerdata.nl/en/liss-panel) data is provided by [Centerdata](https://www.centerdata.nl/).    
-
