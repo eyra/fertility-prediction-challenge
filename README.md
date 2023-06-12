@@ -1,5 +1,5 @@
 # Fertility Prediction Benchmark Challenge Submission
-This is a template repository to submit your Python method for the Fertility Prediction Benchmark Challenge, organized by [Lisa Sivak](https://www.rug.nl/staff/e.sivak/cv) and [Gert Stulp](https://www.rug.nl/staff/g.stulp/). You can read [here](https://github.com/eyra/fertility-prediction-challenge/master/README.md#participation) how to participate in the challenge. 
+This is a template repository to submit your Python method for the Fertility Prediction Benchmark Challenge, organized by [Lisa Sivak](https://www.rug.nl/staff/e.sivak/cv) and [Gert Stulp](https://www.rug.nl/staff/g.stulp/). You can read [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#participation) how to participate in the challenge. 
 
 ## Benchmark
 Accurate predictions of the number and timing of children are crucial for effective resource allocation in society. However, despite many studies in the social sciences, we have no clear understanding of which factors are most important for fertility prediction or how well we are able to predict fertility behaviour. 
