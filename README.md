@@ -127,9 +127,13 @@ Follow the instructions below to submit your method:
 1. Ensure that the script works by running the [Docker command](https://github.com/eyra/fertility-prediction-challenge/tree/master#docker).
 2. Commit changes (i.e. save changes locally)
 3. Push the commit (i.e. upload changed version to your online repository)
-4. Sign in on this website [link will be added]
-5. Provide the URL to your repository on GitHub.
-6. When you click "Submit", your latest commit in this repository will serve as your submission to the benchmark challenge.
+4. On the main page of your repository, above the file list, click commits to view a list of commits, as described [here](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits#about-commit-branches-and-tag-labels) 
+5. Go to the commit that you want to submit and right click on view commit details and click "Copy Link Address", see example below: 
+
+![](https://github.com/eyra/fertility-prediction-challenge/blob/master/Copy%20link%20to%20commit.png)
+
+6. Sign in on this website [link will be added]
+7. Provide the URL to your GitHub commit (full SHA that you just copied), this commit will serve as your submission to the benchmark challenge.
 
 ## License
 This project is licensed under the terms of the [MIT license](https://github.com/eyra/fertility-prediction-challenge/blob/master/LICENSE).
