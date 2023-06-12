@@ -14,9 +14,9 @@ To participate in the challenge follow these steps:
 
 1. Make sure you have filled out the [LISS panel Data Statement](https://statements.centerdata.nl/liss-panel-data-statement) form. 
 2. Register and sign in on this website [link will be added] using your institution email address.
-3. Download the example data to tune and test your method: 
+3. Download the example data to tune your method: 
    - LISS_example_input_data.csv: data that can be used for predictions
-   - LISS_example_groundtruth_data.csv: contains outcome per individual (0=no child, 1=child) for training and testing
+   - LISS_example_groundtruth_data.csv: contains outcome per individual (0=no child, 1=child) for training
 4. Fork and clone the fertility-prediction-challenge repository as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-fork-and-clone-this-repository). 
 5. Add dependencies when required as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-add-dependencies).
 6. Change the content of the predict_outcomes function in [script.py](https://github.com/eyra/fertility-prediction-challenge/blob/master/src/script.py) as explained in the script to include your method. Do not change the expected input and output data format.
