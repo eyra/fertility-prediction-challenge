@@ -17,18 +17,18 @@ To participate in the challenge follow these steps:
 3. Download the example data to tune and test your method: 
    - LISS_example_input_data.csv: data that can be used for predictions
    - LISS_example_groundtruth_data.csv: contains outcome per individual (0=no child, 1=child) for training and testing
-4. Fork and clone the fertility-prediction-challenge repository as explained [here](https://github.com/eyra/fertility-prediction-challenge/master/README.md#how-to-fork-and-clone-this-repository). 
-5. Add dependencies when required as explained [here](https://github.com/eyra/fertility-prediction-challenge/master/README.md#how-to-add-dependencies).
+4. Fork and clone the fertility-prediction-challenge repository as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-fork-and-clone-this-repository). 
+5. Add dependencies when required as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-add-dependencies).
 6. Change the content of the predict_outcomes function in [script.py](https://github.com/eyra/fertility-prediction-challenge/blob/master/src/script.py) as explained in the script to include your method. Do not change the expected input and output data format.
-7. The metrics used to create the challenge [leaderboards](https://github.com/eyra/fertility-prediction-challenge/edit/master/README.md#leaderboard) are included in this repo. You can separate the challenge example data into a train and test set and use the score function in [script.py](https://github.com/eyra/fertility-prediction-challenge/blob/master/src/script.py) to evaluate the performance of your method on the example data as described [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-evaluate-your-method). 
-8. To make sure your challenge submission will work (your method will run on the holdout data), test your implementation as explained [here](https://github.com/eyra/fertility-prediction-challenge/master/README.md#how-to-test-your-implementation). 
-9. Submit your method as explained [here](https://github.com/eyra/fertility-prediction-challenge/master/README.md#how-to-submit-your-method).
+7. The metrics used to create the challenge [leaderboards](https://github.com/eyra/fertility-prediction-challenge/tree/master#leaderboard) are included in this repo. You can separate the challenge example data into a train and test set and use the score function in [script.py](https://github.com/eyra/fertility-prediction-challenge/blob/master/src/script.py) to evaluate the performance of your method on the example data as described [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-evaluate-your-method). 
+8. To make sure your challenge submission will work (your method will run on the holdout data), test your implementation as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-test-your-implementation). 
+9. Submit your method as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-submit-your-method).
 10. Your results on the holdout data and your rank on the leaderboards will become available after signing in on this website [link will be added]. ❗️NB: It takes some time to process the results.
 
 ℹ️ This repo assumes that your method uses the [miniconda3](https://docs.conda.io/en/latest/miniconda.html) Python distribution. 
 
 ### Leaderboards
-The [LISS Panel](https://www.centerdata.nl/en/liss-panel) challenge data is separated into an example dataset for tuning your method and a holdout dataset that will be used to validate your method performance. After [submission](https://github.com/eyra/fertility-prediction-challenge/edit/master/README.md#how-to-submit-your-method) your method will be run on the holdout data. Your evaluation scores on the holdout data will be added to the leaderboards, so your scores can be compared to the performance scores of other methods.
+The [LISS Panel](https://www.centerdata.nl/en/liss-panel) challenge data is separated into an example dataset for tuning your method and a holdout dataset that will be used to validate your method performance. After [submission](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-submit-your-method) your method will be run on the holdout data. Your evaluation scores on the holdout data will be added to the leaderboards, so your scores can be compared to the performance scores of other methods.
 
 The following leaderboards will be available: 
 - [F1](https://www.educative.io/answers/what-is-the-f1-score)* 
@@ -124,7 +124,7 @@ python3 script.py predict
 
 Follow the instructions below to submit your method:
 
-1. Ensure that the script works by running the [Docker command](https://github.com/eyra/fertility-prediction-challenge/edit/master/README.md#docker).
+1. Ensure that the script works by running the [Docker command](https://github.com/eyra/fertility-prediction-challenge/tree/master#docker).
 2. Commit changes (i.e. save changes locally)
 3. Push the commit (i.e. upload changed version to your online repository)
 4. Sign in on this website [link will be added]
