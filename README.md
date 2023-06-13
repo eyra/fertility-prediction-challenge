@@ -17,11 +17,10 @@ To participate in the challenge follow these steps:
 3. Download the example data to tune your method: 
    - LISS_example_input_data.csv: data that can be used for predictions
    - LISS_example_groundtruth_data.csv: contains outcome per individual (0=no child, 1=child) for training
-4. Fork and clone the fertility-prediction-challenge repository as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-fork-and-clone-this-repository). 
-5. Add dependencies when required as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-add-dependencies).
+4. Fork and clone the fertility-prediction-challenge repository as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-fork-and-clone-this-repository). 
 6. Change the content of the predict_outcomes function in [script.py](https://github.com/eyra/fertility-prediction-challenge/blob/master/src/script.py) as explained in the script to include your method. Do not change the expected input and output data format.
-7. The metrics used to create the challenge [leaderboards](https://github.com/eyra/fertility-prediction-challenge/tree/master#leaderboard) are included in this repo. You can separate the challenge example data into a train and test set and use the score function in [script.py](https://github.com/eyra/fertility-prediction-challenge/blob/master/src/script.py) to evaluate the performance of your method on the example data as described [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-evaluate-your-method). 
-8. To make sure your challenge submission will work (your method will run on the holdout data), test your implementation as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-test-your-implementation). 
+7. The metrics used to create the challenge [leaderboards](https://github.com/eyra/fertility-prediction-challenge/tree/master#leaderboard) are included in this repo. You can separate the challenge example data into a train and test set and use the score function in [script.py](https://github.com/eyra/fertility-prediction-challenge/blob/master/src/script.py) to evaluate the performance of your method on the example data as described [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-evaluate-your-method). 
+8. To make sure your challenge submission will work (i.e. your method will run on the holdout data), you can test your implementation as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-test-your-implementation). 
 9. Submit your method as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-submit-your-method).
 10. Your performance scores on the challenge [leaderboards](https://github.com/eyra/fertility-prediction-challenge/tree/master#leaderboard) will become available after signing in on this website [link will be added]. ❗️NB: It takes some time to process the results.
 
@@ -44,13 +43,18 @@ For this challenge the F1 leaderboard is the main leaderboard.
 
 Follow the instructions below to submit your method:
 
-1. Ensure that the script works by running the [Docker command](https://github.com/eyra/fertility-prediction-challenge/tree/master#docker).
-2. Commit changes (i.e. save changes locally)
-3. Push the commit (i.e. upload changed version to your online repository)
+1. Commit changes (i.e. save changes locally)
+2. Push the commit (i.e. upload changed version to your online repository)
+3. In GitHub make sure that the checks pass:
+
+![](https://github.com/eyra/fertility-prediction-challenge/blob/master/images/Checks%20passed.png)
+
+ℹ️ If the check fails go to [FAQ](https://github.com/eyra/fertility-prediction-challenge/wiki#frequently-asked-questions), you might need to add dependencies as described [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-add-dependencies).  
+
 4. On the main page of your repository, above the file list, click commits to view a list of commits, as described [here](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits#about-commit-branches-and-tag-labels) 
 5. Go to the commit that you want to submit and right click on view commit details, then click "Copy Link Address", see example below: 
 
-![](https://github.com/eyra/fertility-prediction-challenge/blob/master/Copy%20link%20to%20commit.png)
+![](https://github.com/eyra/fertility-prediction-challenge/blob/master/images/Copy%20link%20to%20commit.png)
 
 6. Sign in on this website [link will be added]
 7. Provide the URL to your GitHub commit (copied at step 5), this commit will serve as your submission to the benchmark challenge.
