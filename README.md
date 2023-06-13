@@ -49,11 +49,12 @@ To fork and clone [this repository](https://github.com/eyra/fertility-prediction
 3. Wait for the forking process to complete.
 4. Once the forking process is complete, you will have a copy of the repository
    in your own GitHub account or organization.
-5. After forking the repository, clone it to your local machine:
+5. After forking the repository, use [GitHub desktop](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop) or the following command to clone it to your local machine:
 
 ```bash
 git clone https://github.com/<your-username>/fertility-prediction-challenge.git
 ```
+
 
 ## How to add dependencies?
 
