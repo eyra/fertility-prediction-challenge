@@ -2,4 +2,12 @@ name: eyra-rank
 channels:
   - defaults
 dependencies:
-  - pandas=1.5.3
+  - scikit-learn
+  - pandas
+  - matplotlib-base
+  - seaborn
+  - jupyterlab
+  - notebook
+  - plotly
+  - IPython
+  - packaging
