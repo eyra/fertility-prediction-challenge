@@ -56,7 +56,7 @@ Follow the instructions below to submit your method:
 ![](https://github.com/eyra/fertility-prediction-challenge/blob/master/images/Copy%20link%20to%20commit.png)
 
 6. Sign in on this website [link will be added]
-7. Provide the URL to your GitHub commit (copied at step 5), this commit will serve as your submission to the benchmark challenge.
+7. Provide the URL to your GitHub commit (copied at step 5), this commit will serve as your submission to the challenge.
 
 ## License
 This project is licensed under the terms of the [MIT license](https://github.com/eyra/fertility-prediction-challenge/blob/master/LICENSE).
