@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3:23.3.1-0
+FROM continuumio/anaconda3:2023.03-1
 
 COPY environment.yml /
 RUN conda env create -f /environment.yml
