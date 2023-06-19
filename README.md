@@ -52,7 +52,7 @@ For this challenge the F1 leaderboard is the main leaderboard.
 
 Follow the instructions below to submit your method:
 
-1. Commit changes (i.e. save changes locally)
+1. Make sure that you describe your model in the readme.md file in your GitHub repository and commit changes (i.e. save changes locally)
 2. Push the commit (i.e. upload changed version to your online repository)
 3. In GitHub make sure that the checks pass:
 
