@@ -44,8 +44,6 @@ args = parser.parse_args()
 def predict_outcomes(df):
     """Process the input data and write the predictions."""
 
-    # Add your method here.
-
     # The predict_outcomes function accepts a Pandas DataFrame as an argument
     # and returns a new DataFrame with two columns: nomem_encr and
     # prediction. The nomem_encr column in the new DataFrame replicates the
@@ -54,7 +52,10 @@ def predict_outcomes(df):
     # prediction is represented as a binary value: '0' indicates that the
     # individual did not have a child during 2020-2022, while '1' implies that
     # they did.
+    
+    # Add your method here instead of the line below, which is just a dummy example.
     df["prediction"] = df["year"] % 2
+    
     return df[["nomem_encr", "prediction"]]
 
 
