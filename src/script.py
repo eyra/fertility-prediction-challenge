@@ -19,10 +19,11 @@ An example for the provided test is:
 python script.py data/test_data_liss_2_subjects.csv
 """
 
-import csv
+import os
 import sys
 import argparse
 import pandas as pd
+from joblib import load
 
 parser = argparse.ArgumentParser(description="Process and score data.")
 subparsers = parser.add_subparsers(dest="command")
@@ -54,8 +55,11 @@ def predict_outcomes(df):
     # they did.
     
     # Add your method here instead of the line below, which is just a dummy example.
-    df["prediction"] = df["nomem_encr"] % 2
-    
+    model_path = os.path.join(os.path.dirname(__file__), "..", "models", "model.joblib")
+    model = load(model_path)
+    df['prediction'] = model.predict(df[["fake_value"]])
+    # Apply binary classification threshold
+    df["prediction"] = (df["prediction"] >= 0.5).astype(int)
     return df[["nomem_encr", "prediction"]]
 
 

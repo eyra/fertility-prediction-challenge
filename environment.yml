@@ -3,3 +3,5 @@ channels:
   - defaults
 dependencies:
   - pandas>=1.5
+  - scikit-learn>=1.2
+  - joblib>=1.1
