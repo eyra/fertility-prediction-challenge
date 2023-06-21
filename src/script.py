@@ -54,11 +54,15 @@ def predict_outcomes(df):
     # individual did not have a child during 2020-2022, while '1' implies that
     # they did.
     
-    # Add your method here instead of the line below, which is just a dummy example.
+    # Add your method below instead of the example code.
+
+    # Load your trained model from the models directory
     model_path = os.path.join(os.path.dirname(__file__), "..", "models", "model.joblib")
     model = load(model_path)
+
+    # Use your trained model for prediction
     df['prediction'] = model.predict(df[["fake_value"]])
-    # Apply binary classification threshold
+    # Apply binary classification threshold when required
     df["prediction"] = (df["prediction"] >= 0.5).astype(int)
     return df[["nomem_encr", "prediction"]]
 
