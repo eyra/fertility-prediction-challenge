@@ -7,6 +7,7 @@ RUN mkdir /src
 
 COPY data /data
 COPY src/script.py /src
+COPY models /models
 
 ENTRYPOINT ["conda", "run", "-n", "eyra-rank", "python", "/src/script.py"]
-CMD ["predict", "/data/test_data_liss_2_subjects.csv"]
+CMD ["predict", "/data/fake_data.csv"]

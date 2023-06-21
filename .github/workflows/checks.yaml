@@ -25,7 +25,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Run prediction
-        run: docker run --rm -v "$(pwd)/data:/data" eyra-rank:latest predict /data/test_data_liss_2_subjects.csv --out=/data/predictions.csv
+        run: docker run --rm -v "$(pwd)/data:/data" eyra-rank:latest predict /data/fake_data.csv --out=/data/predictions.csv
 
       - name: Run scoring
-        run: docker run --rm -v "$(pwd)/data:/data" eyra-rank:latest score /data/predictions.csv /data/test_data_liss_2_subjects_ground_truth.csv
+        run: docker run --rm -v "$(pwd)/data:/data" eyra-rank:latest score /data/predictions.csv /data/fake_data_ground_truth.csv
