@@ -54,7 +54,7 @@ def predict_outcomes(df):
     # they did.
     
     # Add your method here instead of the line below, which is just a dummy example.
-    df["prediction"] = df["year"] % 2
+    df["prediction"] = df["nomem_encr"] % 2
     
     return df[["nomem_encr", "prediction"]]
 
@@ -62,7 +62,7 @@ def predict_outcomes(df):
 def predict(input_path, output):
     if output is None:
         output = sys.stdout
-    df = pd.read_csv(input_path)
+    df = pd.read_csv(input_path, encoding="latin-1", encoding_errors="replace")
     predictions = predict_outcomes(df)
     assert (
         predictions.shape[1] == 2
