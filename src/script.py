@@ -53,24 +53,27 @@ def predict_outcomes(df):
     # prediction is represented as a binary value: '0' indicates that the
     # individual did not have a child during 2020-2022, while '1' implies that
     # they did.
-    
-    # Add your method below instead of the example code.
 
+    # Keep 
+    keepcols = ['burgstat2019', 'leeftijd2019', 'woonvorm2019', 'oplmet2019', 'aantalki2019']
+    nomem_encr = df["nomem_encr"]
+    
+    df = df.loc[:, keepcols]
+    
     # Load your trained model from the models directory
     model_path = os.path.join(os.path.dirname(__file__), "..", "models", "model.joblib")
     model = load(model_path)
 
     # Use your trained model for prediction
-    df['prediction'] = model.predict(df[["fake_value"]])
-    # Apply binary classification threshold when required
-    df["prediction"] = (df["prediction"] >= 0.5).astype(int)
-    return df[["nomem_encr", "prediction"]]
+    predictions = model.predict(df)
+    # Return the result as a Pandas DataFrame with the columns "nomem_encr" and "prediction"
+    return pd.concat([nomem_encr, pd.Series(predictions, name="prediction")], axis=1)
 
 
 def predict(input_path, output):
     if output is None:
         output = sys.stdout
-    df = pd.read_csv(input_path, encoding="latin-1", encoding_errors="replace")
+    df = pd.read_csv(input_path, encoding="latin-1", encoding_errors="replace", low_memory=False)
     predictions = predict_outcomes(df)
     assert (
         predictions.shape[1] == 2
@@ -105,24 +108,33 @@ def score(prediction_path, ground_truth_path, output):
 
     # Calculate accuracy
     accuracy = len(
-        merged_df[merged_df["prediction"] == merged_df["outcome"]]
+        merged_df[merged_df["prediction"] == merged_df["new_child"]]
     ) / len(merged_df)
 
     # Calculate true positives, false positives, and false negatives
     true_positives = len(
-        merged_df[(merged_df["prediction"] == 1) & (merged_df["outcome"] == 1)]
+        merged_df[(merged_df["prediction"] == 1) & (merged_df["new_child"] == 1)]
     )
     false_positives = len(
-        merged_df[(merged_df["prediction"] == 1) & (merged_df["outcome"] == 0)]
+        merged_df[(merged_df["prediction"] == 1) & (merged_df["new_child"] == 0)]
     )
     false_negatives = len(
-        merged_df[(merged_df["prediction"] == 0) & (merged_df["outcome"] == 1)]
+        merged_df[(merged_df["prediction"] == 0) & (merged_df["new_child"] == 1)]
     )
 
     # Calculate precision, recall, and F1 score
-    precision = true_positives / (true_positives + false_positives)
-    recall = true_positives / (true_positives + false_negatives)
-    f1_score = 2 * (precision * recall) / (precision + recall)
+    try:
+        precision = true_positives / (true_positives + false_positives)
+    except ZeroDivisionError:
+        precision = 0
+    try:
+        recall = true_positives / (true_positives + false_negatives)
+    except ZeroDivisionError:
+        recall = 0
+    try:
+        f1_score = 2 * (precision * recall) / (precision + recall)
+    except ZeroDivisionError:
+        f1_score = 0
     # Write metric output to a new CSV file
     metrics_df = pd.DataFrame({
         'accuracy': [accuracy],
