@@ -62,6 +62,8 @@ def predict_outcomes(df):
     
     df = df.loc[:, keepcols]
     
+    
+    
     # Load your trained model from the models directory
     model_path = os.path.join(os.path.dirname(__file__), "..", "models", "model.joblib")
     model = load(model_path)
@@ -86,6 +88,8 @@ def predict(input_path, output):
     ), "Predictions must have two columns: nomem_encr and prediction"
 
     predictions.to_csv(output, index=False)
+
+
 
 
 def score(prediction_path, ground_truth_path, output):
