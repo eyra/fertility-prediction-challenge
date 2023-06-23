@@ -104,7 +104,7 @@ def score(prediction_path, ground_truth_path, output):
     ground_truth_df = pd.read_csv(ground_truth_path)
 
     # Merge predictions and ground truth on the 'id' column
-    merged_df = pd.merge(predictions_df, ground_truth_df, on="nomem_encr")
+    merged_df = pd.merge(predictions_df, ground_truth_df, on="nomem_encr", how="right")
 
     # Calculate accuracy
     accuracy = len(
