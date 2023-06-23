@@ -19,6 +19,9 @@ An example for the provided test is:
 python script.py data/test_data_liss_2_subjects.csv
 """
 
+
+
+
 import os
 import sys
 import argparse
@@ -54,11 +57,15 @@ def predict_outcomes(df):
     # individual did not have a child during 2020-2022, while '1' implies that
     # they did.
 
+
+    
     # Keep 
-    keepcols = ['burgstat2019', 'leeftijd2019', 'woonvorm2019', 'oplmet2019', 'aantalki2019']
+    keepcols = ['burgstat2019', 'leeftijd2019', 'woonvorm2019', 'oplmet2019', 'aantalki2019','test_test']
     nomem_encr = df["nomem_encr"]
     
     df = df.loc[:, keepcols]
+    
+    
     
     # Load your trained model from the models directory
     model_path = os.path.join(os.path.dirname(__file__), "..", "models", "model.joblib")
@@ -84,6 +91,8 @@ def predict(input_path, output):
     ), "Predictions must have two columns: nomem_encr and prediction"
 
     predictions.to_csv(output, index=False)
+
+
 
 
 def score(prediction_path, ground_truth_path, output):
