@@ -57,7 +57,7 @@ def predict_outcomes(df):
 
     
     # Keep 
-    keepcols = ['burgstat2019', 'leeftijd2019', 'woonvorm2019', 'oplmet2019', 'aantalki2019']
+    keepcols = ['burgstat2019', 'leeftijd2019', 'woonvorm2019', 'oplmet2019', 'aantalki2019','test_test']
     nomem_encr = df["nomem_encr"]
     
     df = df.loc[:, keepcols]
