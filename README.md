@@ -15,6 +15,7 @@ The challenge is to predict whether an individual will have a child within a thr
 For the SICSS-ODISSEI Summer School 2023, the challenge consists of 2 rounds. [Round 1](https://eyra.co/benchmark/5) will close on **Wednesday 21 June 2023 at 16:00** and [Round 2](https://eyra.co/benchmark/6) will close on **Monday 26 June at 9:00 a.m.**
 
 ### Preparation
+
 1. Make sure you have filled out the [LISS panel Data Statement](https://statements.centerdata.nl/liss-panel-data-statement) form.
 2. Register and sign in on the [Next platform](https://eyra.co/benchmark/5) using your institution email address.
 3. Download the example data from the challenge website ([Round 1](https://eyra.co/benchmark/5), [Round 2](https://eyra.co/benchmark/6)) to tune your method:
@@ -26,12 +27,12 @@ For the SICSS-ODISSEI Summer School 2023, the challenge consists of 2 rounds. [R
 ### Participation
 
 1. Fork and clone [this](https://github.com/eyra/fertility-prediction-challenge) repository as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-fork-and-clone-this-repository).
-2. Change the content of the **predict_outcomes function** in [script.py](https://github.com/eyra/fertility-prediction-challenge/blob/master/src/script.py) as explained in the script to include your method. Do not change the expected input and output data format.
-3. The metrics used to create the challenge [leaderboards](https://github.com/eyra/fertility-prediction-challenge/tree/master#leaderboard) are included in this repo. You can separate the challenge example data into a train and test set and use the score function in [script.py](https://github.com/eyra/fertility-prediction-challenge/blob/master/src/script.py) to determine your method performance scores on the example data as described [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-evaluate-your-method).
+2. Change the content of the **predict_outcomes function** in [submission.py](https://github.com/eyra/fertility-prediction-challenge/blob/master/src/submission.py) as explained in the script to include your method. Do not change the expected input and output data format.
+3. The metrics used to create the challenge [leaderboards](https://github.com/eyra/fertility-prediction-challenge/tree/master#leaderboard) are included in this repo. You can separate the challenge example data into a train and test set and use the score function in [submission.py](https://github.com/eyra/fertility-prediction-challenge/blob/master/src/submission.py) to determine your method performance scores on the example data as described [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-evaluate-your-method).
 4. Submit your method as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-submit-your-method).
-5. Your performance scores on the challenge [leaderboards](https://github.com/eyra/fertility-prediction-challenge/tree/master#leaderboard) will become available after signing in on the Next platform ([Round 1](https://eyra.co/benchmark/5), [Round 2](https://eyra.co/benchmark/6)). 
+5. Your performance scores on the challenge [leaderboards](https://github.com/eyra/fertility-prediction-challenge/tree/master#leaderboard) will become available after signing in on the Next platform ([Round 1](https://eyra.co/benchmark/5), [Round 2](https://eyra.co/benchmark/6)).
 
-ℹ️  It takes some time to process the results for the leaderboards.
+ℹ️ It takes some time to process the results for the leaderboards.
 
 ### Leaderboards
 
