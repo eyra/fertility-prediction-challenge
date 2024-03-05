@@ -1,6 +1,6 @@
 # Fertility Prediction Challenge (PreFer)
 
-This is a template repository to submit your method for phase 1 of the Fertility Prediction Challenge ([PreFer](preferdatachallenge.nl)). You can read [here](preferdatachallenge.nl/#how-to-participate) how to participate in the challenge.
+This is a template repository to submit your method for phase 1 of the Fertility Prediction Challenge ([PreFer](https://preferdatachallenge.nl)). You can read [here](https://preferdatachallenge.nl/#how-to-participate) how to participate in the challenge.
 
 ## Benchmark
 
@@ -12,7 +12,7 @@ This benchmark aims to gain insight into how well methods are able to predict fe
 
 The challenge is to predict whether an individual will have a child within a three year period (2021-2023), based on survey data from previous years (2007-2020). Data about family and children, partnerships, education, income, employment, health, and more can be used for prediction.
 
-Check out ([important dates](preferdatachallenge.nl/#important-dates)) to see when this challenge phase will open and close.
+Check out ([important dates](https://preferdatachallenge.nl/#important-dates)) to see when this challenge phase will open and close.
 
 ### Preparation
 
