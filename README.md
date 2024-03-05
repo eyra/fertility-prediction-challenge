@@ -1,18 +1,18 @@
-# Fertility Prediction Challenge
+# Fertility Prediction Challenge (PreFer)
 
-This is a template repository to submit your Python method for the Fertility Prediction Challenge, organized by [Lisa Sivak](https://www.rug.nl/staff/e.sivak/cv) and [Gert Stulp](https://www.rug.nl/staff/g.stulp/). You can read [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#participation) how to participate in the challenge.
+This is a template repository to submit your method for phase 1 of the Fertility Prediction Challenge ([PreFer](preferdatachallenge.nl)). You can read [here](preferdatachallenge.nl/#how-to-participate) how to participate in the challenge.
 
 ## Benchmark
 
 Accurate predictions of the number and timing of children are crucial for effective resource allocation in society. However, despite many studies in the social sciences, we have no clear understanding of which factors are most important for fertility prediction or how well we are able to predict fertility behaviour.
 
-This benchmark aims to gain insight into how well methods are able to predict fertility within a three year period (2020-2022), based on survey data from previous years (2007-2019) of people in the [LISS Panel](https://www.centerdata.nl/en/liss-panel) who were aged 18-45 in 2019. The LISS Panel is a representative online longitudinal panel of Dutch households.
+This benchmark aims to gain insight into how well methods are able to predict fertility within a three year period (2021-2023), based on survey data from previous years (2007-2020) of people in the [LISS Panel](https://www.centerdata.nl/en/liss-panel) who were aged 18-45 in 2020. The LISS Panel is a representative online longitudinal panel of Dutch households.
 
-## Challenge
+## Challenge (Phase 1)
 
-The challenge is to predict whether an individual will have a child within a three year period (2020-2022), based on survey data from previous years (2007-2019). Data about family and children, partnerships, education, income, employment, health, and more can be used for prediction.
+The challenge is to predict whether an individual will have a child within a three year period (2021-2023), based on survey data from previous years (2007-2020). Data about family and children, partnerships, education, income, employment, health, and more can be used for prediction.
 
-For the SICSS-ODISSEI Summer School 2023, the challenge consists of 2 rounds. [Round 1](https://eyra.co/benchmark/5) will close on **Wednesday 21 June 2023 at 16:00** and [Round 2](https://eyra.co/benchmark/6) will close on **Monday 26 June at 9:00 a.m.**
+Check out ([important dates](preferdatachallenge.nl/#important-dates)) to see when this challenge phase will open and close.
 
 ### Preparation
 
