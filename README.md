@@ -14,17 +14,17 @@ The challenge is to predict whether an individual will have a child within a thr
 
 Check out ([important dates](https://preferdatachallenge.nl/#important-dates)) to see when this challenge phase will open and close.
 
+During this challenge phase, the Liss dataset is used, which is split into a training and holdout dataset as described [here](https://stulp.gmw.rug.nl/prefer/details/overview/2data.html#liss-dataset). You can use the training dataset to tune your method. When you have prepared your method, you can submit it through the Next platform, after which it will be run and evaluated on the holdout dataset and your result will be added to the challenge leaderboard.
+
 ### Preparation
 
-1. Make sure you have filled out the [LISS panel Data Statement](https://statements.centerdata.nl/liss-panel-data-statement) form.
-2. Register and sign in on the [Next platform](https://eyra.co/benchmark/5) using your institution email address.
-3. Download the example data from the challenge website ([Round 1](https://eyra.co/benchmark/5), [Round 2](https://eyra.co/benchmark/6)) to tune your method:
-   - LISS_example_input_data.csv: data that can be used for predictions
-   - LISS_example_groundtruth_data.csv: contains outcome per individual (0=no child, 1=child) for training
+1. If you have [registered](https://preferdatachallenge.nl/details/overview/3application.html) for the PreFer challenge, you will receive a link for participation.
+2. Visit the Next platform and sign in to download the training data.
+3. Fork and clone [this](https://github.com/eyra/fertility-prediction-challenge) repository as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-fork-and-clone-this-repository).
 
-ℹ️ This repo assumes that your method uses the [Anaconda](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html) Python distribution.
+ℹ️ You can use either Python or R for your method. For Python this repo assumes that your method uses the [Anaconda](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html) Python distribution.
 
-### Participation
+### Participation [Work in progress]
 
 1. Fork and clone [this](https://github.com/eyra/fertility-prediction-challenge) repository as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-fork-and-clone-this-repository).
 2. Change the content of the **predict_outcomes function** in [submission.py](https://github.com/eyra/fertility-prediction-challenge/blob/master/src/submission.py) as explained in the script to include your method. Do not change the expected input and output data format.
