@@ -20,10 +20,10 @@ During this challenge phase, the Liss dataset is used, which is split into a tra
 
 1. If you have [registered](https://preferdatachallenge.nl/details/overview/3application.html) for the PreFer challenge, you will receive a link for participation.
 2. Visit the Next platform and sign in to download the training data. This data consists of:
-    1. ```PreFer_training_data.csv``` (data that can be used for predicting outcomes)
-    2. ```PreFer_training_outcome.csv``` (ground truth outcome values that can be used for testing whether predicted outcomes are correct)
-    3. ```PreFer_training_background_data.csv``` 
-    4. ```PreFer_training_supplementary_data.csv``` 
+    1. ```PreFer_training_data.csv``` (training dataset that can be used for predicting outcomes)
+    2. ```PreFer_training_outcome.csv``` (ground truth outcome for the training dataset)
+    3. ```PreFer_training_background_data.csv``` (optional additional dataset with more detailed values (monthly) for a limited number of demographic and socio-economic variables)
+    4. ```PreFer_training_supplementary_data.csv``` (optional additional dataset with data from LISS respondents that are not included in the challenge data sample of 18-45 year olds in 2020)
 
 ### Prepare your method
 To participate in the challenge you need to submit a method using this repository. 
