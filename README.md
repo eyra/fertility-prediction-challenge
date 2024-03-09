@@ -36,9 +36,9 @@ Follow the steps below to prepare your method for submission:
 2. Go to submission.py (Python) or submission.R (R) depending on your preferred programming language. 
 3. Use ```clean_df(df)``` to clean (preprocess) the data according to your preferences.
 4. Replace the example code in ```predict_outcomes(df)``` with your prediction method.
-5. Test your method on the “fake” data in the [data folder](https://github.com/eyra/fertility-prediction-challenge/tree/master/data) with the ```test_submission``` function. In you encounter errors, debug your method until it works. If your method does not run on the “fake” data, it will not run on the holdout data either and your submission will not result in a place on the challenge leaderboard.
-6. Submit your method as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-submit-your-method).
-
+5. Test your method on the “fake” data in the [data folder](https://github.com/eyra/fertility-prediction-challenge/tree/master/data) with the ```test_submission``` function. If you encounter errors, debug your method until it works. If your method does not run on the “fake” data, it will not run on the holdout data either and your submission will not result in a place on the challenge leaderboard.
+6. Submit your method as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#submit-your-method).
+   
 ℹ️ Leaderboards are generated at fixed time points, check out ([important dates](https://preferdatachallenge.nl/#important-dates)) for leaderboard submission deadlines.
 
 ### Submit your method
