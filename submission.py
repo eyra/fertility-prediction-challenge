@@ -25,20 +25,22 @@ def clean_df(df):
     ### If no cleaning is done (e.g. if all the cleaning is done in a pipeline) leave only the "return df" command
 
     # e.g. keep some variables (the ones you used in your model)
-    # keepcols = [
-    #     "burgstat2019",
-    #     "leeftijd2019",
-    #     "woonvorm2019",
-    #     "oplmet2019",
-    #     "aantalki2019",
-    # ]
-    # df = df.loc[:, keepcols]
+    keepcols = [
+         'birthyear_bg', 
+         'gender_bg', 
+         'burgstat_2020',
+         'oplmet_2020', 
+         'cf20m454']
+    
+    df = df.loc[:, keepcols]
 
     return df
 
 
-def predict_outcomes(df):
-    """Process the input data and write the predictions."""
+
+
+def predict_outcomes(df, model_path="model.joblib"):
+    """Write the predictions."""
 
     # The predict_outcomes function accepts a Pandas DataFrame as an argument
     # and returns a new DataFrame with two columns: nomem_encr and
@@ -49,20 +51,12 @@ def predict_outcomes(df):
     # individual did not have a child during 2021-2023, while '1' implies that
     # they did.
 
-    # Keep
-    keepcols = [
-        "burgstat2019",
-        "leeftijd2019",
-        "woonvorm2019",
-        "oplmet2019",
-        "aantalki2019",
-    ]
-    nomem_encr = df["nomem_encr"]
+    nomem_encr = df[['nomem_encr']]
+    # cleaning 
+    df = clean_df(df)
 
-    df = df.loc[:, keepcols]
-
-    # Load your trained model from the models directory
-    model_path = os.path.join(os.path.dirname(__file__), "models", "model.joblib")
+    # Load your trained model 
+    #model_path = os.path.join(os.path.dirname(__file__), "model.joblib")
     model = load(model_path)
 
     # Use your trained model for prediction
