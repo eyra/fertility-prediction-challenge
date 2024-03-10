@@ -1,22 +1,18 @@
 """
-This is an example script to generate the outcome variable given the input dataset.
+This script calls submission.py. Add your method to submission.py to run your
+prediction method.
 
-This script should be modified to prepare your own submission that predicts 
-the outcome for the benchmark challenge by changing the predict_outcomes function. 
+To test your submission use the following command:
 
-The predict_outcomes function takes a Pandas data frame. The return value must
-be a data frame with two columns: nomem_encr and outcome. The nomem_encr column
-should contain the nomem_encr column from the input data frame. The outcome
-column should contain the predicted outcome for each nomem_encr. The outcome
-should be 0 (no child) or 1 (having a child).
+python run.py predict 
 
-The script can be run from the command line using the following command:
+For example:
 
-python run.py input_path 
+python run.py predict data/PreFer_fake_data.csv PreFer_fake_data_predictions.csv 
 
-An example for the provided test is:
+Optionally, you can use the score function to calculate evaluation scores given 
+your predictions and the ground truth within the training dataset.
 
-python run.py data/test_data_liss_2_subjects.csv
 """
 
 import sys
@@ -46,6 +42,15 @@ args = parser.parse_args()
 
 
 def predict(input_path, output):
+    """Predict Score (evaluate) the predictions and write the metrics.
+
+    This function takes the path to an input CSV file containing the input data.
+    It calls submission.py clean_df and predict_outcomes writes the predictions
+    to a new output CSV file.
+
+    This function should not be modified.
+    """    
+    
     if output is None:
         output = sys.stdout
     df = pd.read_csv(
