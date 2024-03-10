@@ -7,7 +7,7 @@ RUN mkdir /app
 
 COPY data /data
 COPY *.py /
-COPY models /models
+COPY *.joblib /
 
 ENTRYPOINT ["conda", "run", "-n", "eyra-rank", "python", "/run.py"]
 CMD ["predict", "/data/fake_data.csv"]

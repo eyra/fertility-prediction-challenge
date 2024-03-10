@@ -1,6 +1,6 @@
 name: Test
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   test:
@@ -23,6 +23,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Determine Dockerfile
+        id: dockerfile
+        run: cat settings.json | jq -r .dockerfile  | awk '{printf "filename=%s", $0}' >> "$GITHUB_OUTPUT"
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
@@ -30,6 +34,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
+          file: ${{steps.dockerfile.outputs.filename}}
           tags: eyra-rank:latest
           load: true
 
