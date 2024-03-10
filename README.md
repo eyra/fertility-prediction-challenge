@@ -33,12 +33,14 @@ To participate in the challenge you need to submit a method using this repositor
 Follow the steps below to prepare your method for submission:
 
 1. Make a copy of [this](https://github.com/eyra/fertility-prediction-challenge) template repository, by forking and cloning as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-fork-and-clone-this-repository).
-2. If you are using R, go to ```settings.json``` and change ```{"dockerfile": "python.Dockerfile"}``` into ```{"dockerfile": "r.Dockerfile"}```.
-3. Go to submission.py (Python) or submission.R (R) depending on your preferred programming language. 
+2. If you are using R, go to ```settings.json``` and change ```{"dockerfile": "python.Dockerfile"}``` into ```{"dockerfile": "r.Dockerfile"}```. Read [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-update-files-in-your-forked-repository) how to update files in your forked repository.
+3. Go to ```submission.py``` (Python) or ```submission.R``` (R) depending on your preferred programming language. 
 4. Adjust ```clean_df``` to clean (preprocess) the data according to your preferences.
 5. Adjust ```predict_outcomes``` to add your prediction method.
-6. Use ```predict``` in the run script (```run.py``` or ```run.R```) to test your method on the “fake” data in the [data folder](https://github.com/eyra/fertility-prediction-challenge/tree/master/data) **[coming soon]**. If you encounter errors, debug your method until it works. If your method does not run on the “fake” data, it will not run on the holdout data either and your submission will not result in a place on the challenge leaderboard.
-7. Submit your method as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#submit-your-method).
+6. Make sure that your model (```model.joblib```/```model.rds```) is saved in the same folder as the submission script (```submission.py```/```submission.R```).
+7. (optionally) For Python, if you installed a new library or are not using the latest version of the libraries in ```environment.yml```, update that file. Use “conda env list” to view the package versions. For example if you see “scikit-learn=1.3.2=py310h417b086_1”, you can add a new line “- scikit-learn>=1.3” in ```environment.yml```
+8. Use ```predict``` in the run script (```run.py```/```run.R```) to test your method on the “fake” data in the [data folder](https://github.com/eyra/fertility-prediction-challenge/tree/master/data) **[coming soon]**. If you encounter errors, debug your method until it works. If your method does not run on the “fake” data, it will not run on the holdout data either and your submission will not result in a place on the challenge leaderboard.
+9. Submit your method as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#submit-your-method).
    
 ℹ️ Leaderboards are generated at fixed time points, check out ([important dates](https://preferdatachallenge.nl/#important-dates)) for leaderboard submission deadlines.
 
