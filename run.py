@@ -49,14 +49,13 @@ def predict(input_path, output):
     to a new output CSV file.
 
     This function should not be modified.
-    """    
-    
+    """
+
     if output is None:
         output = sys.stdout
     df = pd.read_csv(
         input_path, encoding="latin-1", encoding_errors="replace", low_memory=False
     )
-    df = submission.clean_df(df)
     predictions = submission.predict_outcomes(df)
     assert (
         predictions.shape[1] == 2
