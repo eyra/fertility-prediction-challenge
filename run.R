@@ -1,5 +1,13 @@
 #!/usr/bin/env Rscript
 
+# This script calls submission.R. 
+# Add your method there.
+
+# To test your submission use the following command: 
+# Rscript run.R predict data/PreFer_fake_data.csv
+
+# Install required packages with Rscript packages.R
+
 library(dplyr)
 library(tidyr)
 
