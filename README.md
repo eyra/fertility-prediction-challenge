@@ -28,16 +28,17 @@ During this challenge phase, the Liss dataset is used, which is split into a tra
 ### Prepare your method
 To participate in the challenge you need to submit a method using this repository. 
 
-ℹ️ You can use either Python or R for your method. For Python this repo assumes that your method uses the [Anaconda](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html) Python distribution.
+ℹ️ You can use either Python or R for your method. By default, Python is used. For Python this repo assumes that your method uses the [Anaconda](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html) Python distribution.
 
 Follow the steps below to prepare your method for submission:
 
 1. Make a copy of [this](https://github.com/eyra/fertility-prediction-challenge) template repository, by forking and cloning as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-fork-and-clone-this-repository).
-2. Go to submission.py (Python) or submission.R (R) depending on your preferred programming language. 
-3. Use ```clean_df(df)``` to clean (preprocess) the data according to your preferences.
-4. Replace the example code in ```predict_outcomes(df)``` with your prediction method.
-5. Test your method on the “fake” data in the [data folder](https://github.com/eyra/fertility-prediction-challenge/tree/master/data) [To be added]. If you encounter errors, debug your method until it works. If your method does not run on the “fake” data, it will not run on the holdout data either and your submission will not result in a place on the challenge leaderboard.
-6. Submit your method as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#submit-your-method).
+2. If you are using R, go to ```settings.json``` and change ```{"dockerfile": "python.Dockerfile"}``` into ```{"dockerfile": "r.Dockerfile"}```.
+3. Go to submission.py (Python) or submission.R (R) depending on your preferred programming language. 
+4. Adjust ```clean_df``` to clean (preprocess) the data according to your preferences.
+5. Adjust ```predict_outcomes``` to add your prediction method.
+6. Test your method on the “fake” data in the [data folder](https://github.com/eyra/fertility-prediction-challenge/tree/master/data) **[coming soon]**. If you encounter errors, debug your method until it works. If your method does not run on the “fake” data, it will not run on the holdout data either and your submission will not result in a place on the challenge leaderboard.
+7. Submit your method as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#submit-your-method).
    
 ℹ️ Leaderboards are generated at fixed time points, check out ([important dates](https://preferdatachallenge.nl/#important-dates)) for leaderboard submission deadlines.
 
@@ -47,7 +48,7 @@ Follow the instructions below to submit your method:
 
 1. Make sure that you describe your model in the readme.md file in your GitHub repository and commit changes (i.e. save changes locally)
 2. Push the commit (i.e. upload changed version to your online repository)
-3. In GitHub make sure that the checks pass:
+3. In GitHub make sure that the checks pass **[currently the checks do not pass, this will be fixed once the fake data is added to the repo]**:
 
 ![](https://github.com/eyra/fertility-prediction-challenge/blob/master/images/Checks%20passed.png)
 
@@ -58,7 +59,7 @@ Follow the instructions below to submit your method:
 
 ![](https://github.com/eyra/fertility-prediction-challenge/blob/master/images/Copy%20link%20to%20commit.png)
 
-6. Add a submission on the Next platform ([Round 1](https://eyra.co/benchmark/5), [Round 2](https://eyra.co/benchmark/6)) by providing the URL to your GitHub commit (copied at step 5), this commit will serve as your submission to the challenge.
+6. Add a submission on the Next platform by providing the URL to your GitHub commit (copied at step 5), this commit will serve as your submission to the challenge.
 
 ## Leaderboards
 
