@@ -8,7 +8,7 @@ python run.py predict
 
 For example:
 
-python run.py predict data/PreFer_fake_data.csv PreFer_fake_data_predictions.csv 
+python run.py predict data/PreFer_fake_data.csv
 
 Optionally, you can use the score function to calculate evaluation scores given 
 your predictions and the ground truth within the training dataset.
