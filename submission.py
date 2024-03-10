@@ -2,7 +2,7 @@
 This is an example script to generate the outcome variable given the input dataset.
 
 This script should be modified to prepare your own submission that predicts 
-the outcome for the benchmark challenge by changing the predict_outcomes function. 
+the outcome for the benchmark challenge by changing the predict_outcomes function.
 
 The predict_outcomes function takes a Pandas data frame. The return value must
 be a data frame with two columns: nomem_encr and outcome. The nomem_encr column
@@ -10,13 +10,9 @@ should contain the nomem_encr column from the input data frame. The outcome
 column should contain the predicted outcome for each nomem_encr. The outcome
 should be 0 (no child) or 1 (having a child).
 
-The script can be run from the command line using the following command:
+clean_df can be used to clean (preprocess) the data.
 
-python run.py input_path 
-
-An example for the provided test is:
-
-python run.py data/test_data_liss_2_subjects.csv
+run.py can be used to test your submission.
 """
 
 import os
@@ -50,7 +46,7 @@ def predict_outcomes(df):
     # corresponding column from the input DataFrame. The prediction
     # column contains predictions for each corresponding nomem_encr. Each
     # prediction is represented as a binary value: '0' indicates that the
-    # individual did not have a child during 2020-2022, while '1' implies that
+    # individual did not have a child during 2021-2023, while '1' implies that
     # they did.
 
     # Keep
