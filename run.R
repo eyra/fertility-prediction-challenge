@@ -89,9 +89,6 @@ run_predict <- function(input_path, output=NULL) {
   # Read data from input file
   df <- read.csv(input_path, encoding="latin1")
   
-  # Clean the data
-  df <- clean_df(df)  # Assuming clean_df is a function in the submission package
-  
   # Make predictions
   predictions <- predict_outcomes(df)  # Assuming predict_outcomes is a function in the submission package
   
