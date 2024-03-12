@@ -38,7 +38,7 @@ Follow the steps below to prepare your method for submission:
 4. Adjust ```clean_df``` to clean (preprocess) the data according to your preferences.
 5. Adjust ```predict_outcomes``` to add your prediction method.
 6. Make sure that your model (```model.joblib```/```model.rds```) is saved in the same folder as the submission script (```submission.py```/```submission.R```).
-7. (optionally) For Python, if you installed a new library or are not using the latest version of the libraries in ```environment.yml```, update that file. Use “conda env list” to view the package versions. 
+7. (optionally) For Python, if you installed a new library or are not using the latest version of the libraries in ```environment.yml```, update that file. Use “conda env export” to view the package versions installed. 
 8. Use ```predict``` in the run script (```run.py```/```run.R```) to test your method on the “fake” data in the [data folder](https://github.com/eyra/fertility-prediction-challenge/tree/master/data) **[coming soon]**. If you encounter errors, debug your method until it works. If your method does not run on the “fake” data, it will not run on the holdout data either and your submission will not result in a place on the challenge leaderboard.
 9. Submit your method as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#submit-your-method).
    
