@@ -73,7 +73,7 @@ The following leaderboards will be available:
 
 For this challenge the F1 leaderboard is the main leaderboard.
 
-ℹ️ The Python code to calculate the metric scores used to create the challenge leaderboards are included in this repo. You can evaluate your own predictions using the ```score(prediction_path, ground_truth_path, output)``` function in ```run.py``` to determine your method performance scores on the training data.**HOW CAN R USERS DO THIS EXACTLY?**
+ℹ️ The Python code to calculate the metric scores used to create the challenge leaderboards are included in this repo. You can evaluate your own predictions using the ```score(prediction_path, ground_truth_path, output)``` function in ```run.py``` to determine your method performance scores on the training data.
 
 ## PreFer Challenge scope
 
