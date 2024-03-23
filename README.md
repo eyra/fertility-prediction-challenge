@@ -2,8 +2,7 @@
 
 This is a template repository to submit your method for phase 1 of the Fertility Prediction Challenge ([PreFer](https://preferdatachallenge.nl)). [Here](https://preferdatachallenge.nl/#how-to-participate) you can read how to participate in the challenge. The challenge is to predict whether an individual will have a child within a three year period (2021-2023), based on survey data from previous years (2007-2020). Data come from the [LISS Panel](https://www.centerdata.nl/en/liss-panel). For more information, on the data challenge, please visit the [website](https://preferdatachallenge.nl) and read [this paper](https://arxiv.org/abs/2402.00705).
 
-## Aim of this repository and quick overview of steps
-The ultimate aim of this repository is to submit your model that you have trained on the training data (which you will have access to) so that it will be evaluated on the holdout data (which you will never get access to). Below we provide detailed steps on how to do this. The general workflow is as follows: 1) you train your model using the training data `PreFer_train_data.csv`, likely after preprocessing this training data; 2) you save the code used for preprocessing the training data and the trained model; 3) you test your code and model on fake data that has the same structure as the holdout data; 4) when you have passed the test, you submit your code and model via this repository after which another automated test will run, and when successful, the code and model will be applied to the holdout data. 
+ℹ️ Check out ([important dates](https://preferdatachallenge.nl/#important-dates)) to see when this challenge phase will open and close.
 
 ## Prerequisites
 
@@ -76,9 +75,7 @@ For this challenge the F1 leaderboard is the main leaderboard.
 
 ℹ️ The Python code to calculate the metric scores used to create the challenge leaderboards are included in this repo. You can evaluate your own predictions using the ```score(prediction_path, ground_truth_path, output)``` function in ```run.py``` to determine your method performance scores on the training data.**HOW CAN R USERS DO THIS EXACTLY?**
 
-## Some further information on PreFer
-
-ℹ️ Check out ([important dates](https://preferdatachallenge.nl/#important-dates)) to see when this challenge phase will open and close.
+## PreFer Challenge scope
 
 ### Research problem
 Accurate predictions of the number and timing of children are crucial for effective resource allocation in society. However, despite many studies in the social sciences, we have no clear understanding of which factors are most important for fertility prediction or how well we are able to predict fertility behaviour.
