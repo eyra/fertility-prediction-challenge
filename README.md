@@ -1,60 +1,53 @@
-# Fertility Prediction Challenge (PreFer)
+# Fertility Prediction Data Challenge (PreFer)
 
-This is a template repository to submit your method for phase 1 of the Fertility Prediction Challenge ([PreFer](https://preferdatachallenge.nl)). You can read [here](https://preferdatachallenge.nl/#how-to-participate) how to participate in the challenge.
+This is a template repository to submit your method for phase 1 of the Fertility Prediction Challenge ([PreFer](https://preferdatachallenge.nl)). [Here](https://preferdatachallenge.nl/#how-to-participate) you can read how to participate in the challenge. The challenge is to predict whether an individual will have a child within a three year period (2021-2023), based on survey data from previous years (2007-2020). Data come from the [LISS Panel](https://www.centerdata.nl/en/liss-panel). For more information, on the data challenge, please visit the [website](https://preferdatachallenge.nl) and read [this paper](https://arxiv.org/abs/2402.00705).
 
-## Research problem
-Accurate predictions of the number and timing of children are crucial for effective resource allocation in society. However, despite many studies in the social sciences, we have no clear understanding of which factors are most important for fertility prediction or how well we are able to predict fertility behaviour.
+## Aim of this repository and quick overview of steps
+The ultimate aim of this repository is to submit your model that you have trained on the training data (which you will have access to) so that it will be evaluated on the holdout data (which you will never get access to). Below we provide detailed steps on how to do this. The general workflow is as follows: 1) you train your model using the training data `PreFer_train_data.csv`, likely after preprocessing this training data; 2) you save the code used for preprocessing the training data and the trained model; 3) you test your code and model on fake data that has the same structure as the holdout data; 4) when you have passed the test, you submit your code and model via this repository after which another automated test will run, and when successful, the code and model will be applied to the holdout data. 
 
-## Purpose statement
-To gain insight into how well methods are able to predict fertility within a three year period (2021-2023), based on survey data from previous years (2007-2020) of people in the [LISS Panel](https://www.centerdata.nl/en/liss-panel) who were aged 18-45 in 2020. The LISS Panel is a representative online longitudinal panel of Dutch households.
+## Prerequisites
 
-## Challenge
+1. Make a copy of [this](https://github.com/eyra/fertility-prediction-challenge) template repository, by forking and cloning as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-fork-and-clone-this-repository).
+2. If you have [registered](https://preferdatachallenge.nl/details/overview/3application.html) for the PreFer challenge, you will receive a link to download the data from the [Next platform](PLACEHOLDER).
+3. Visit the [Next platform](LINK) and sign in to download the training data and codebooks. [Here](https://preferdatachallenge.nl/posts/posts/2024-03-20-prefer-datasets.html) is a detailed explanation of the datasets that you have downloaded, and [here](https://preferdatachallenge.nl/posts/posts/2024-03-21-prefer-codebooks.html) for an explanation of how to use the codebooks. 
 
-The challenge is to predict whether an individual will have a child within a three year period (2021-2023), based on survey data from previous years (2007-2020). Data about family and children, partnerships, education, income, employment, health, and more can be used for prediction.
+## Prepare your method
 
-During this challenge phase, the Liss dataset is used, which is split into a training and holdout dataset as described [here](https://stulp.gmw.rug.nl/prefer/details/overview/2data.html#liss-dataset). You can use the training dataset to tune your method. When you have prepared your method, you can submit it through the Next platform, after which it will be run and evaluated on the holdout dataset and your result will be added to the challenge leaderboard.
-
-ℹ️ Check out ([important dates](https://preferdatachallenge.nl/#important-dates)) to see when this challenge phase will open and close.
-
-### Prerequisites
-
-1. If you have [registered](https://preferdatachallenge.nl/details/overview/3application.html) for the PreFer challenge, you will receive a link for participation.
-2. Visit the Next platform and sign in to download the training data. This data consists of:
-    1. ```PreFer_training_data.csv``` (training dataset that can be used for predicting outcomes)
-    2. ```PreFer_training_outcome.csv``` (ground truth outcome for the training dataset)
-    3. ```PreFer_training_background_data.csv``` (optional additional dataset with more detailed values (monthly) for a limited number of demographic and socio-economic variables)
-    4. ```PreFer_training_supplementary_data.csv``` (optional additional dataset with data from LISS respondents that are not included in the challenge data sample of 18-45 year olds in 2020)
-
-### Prepare your method
-To participate in the challenge you need to submit a method using this repository. 
+To participate in the challenge you need to submit a method (i.e. code for data preprocessing, training, and making predictions, and the trained model) using this repository. 
 
 ℹ️ You can use either Python or R for your method. By default, Python is used. For Python this repo assumes that your method uses the [Anaconda](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html) Python distribution.
 
-Follow the steps below to prepare your method for submission:
+1. **Choosing your programming language**: the default set-up is Python, if you would like to use R, go to ```settings.json``` and change ```{"dockerfile": "python.Dockerfile"}``` into ```{"dockerfile": "r.Dockerfile"}```. Read [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-update-files-in-your-forked-repository) how to update files in your forked repository. 
 
-1. Make a copy of [this](https://github.com/eyra/fertility-prediction-challenge) template repository, by forking and cloning as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-fork-and-clone-this-repository).
-2. If you are using R, go to ```settings.json``` and change ```{"dockerfile": "python.Dockerfile"}``` into ```{"dockerfile": "r.Dockerfile"}```. Read [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-update-files-in-your-forked-repository) how to update files in your forked repository.
-3. Go to ```submission.py``` (Python) or ```submission.R``` (R) depending on your preferred programming language. 
-4. Adjust ```clean_df``` to clean (preprocess) the data according to your preferences.
-5. Adjust ```predict_outcomes``` to add your prediction method.
-6. Make sure that your model (```model.joblib```/```model.rds```) is saved in the same folder as the submission script (```submission.py```/```submission.R```).
-7. (optionally) For Python, if you installed a new library or are not using the latest version of the libraries in ```environment.yml```, update that file. Use “conda env export” to view the package versions installed. 
-8. Use ```predict``` in the run script (```run.py```/```run.R```) to test your method on the “fake” data in the [data folder](https://github.com/eyra/fertility-prediction-challenge/tree/master/data) **[coming soon]**. If you encounter errors, debug your method until it works. If your method does not run on the “fake” data, it will not run on the holdout data either and your submission will not result in a place on the challenge leaderboard.
-9. Submit your method as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#submit-your-method).
-   
-ℹ️ Leaderboards are generated at fixed time points, check out ([important dates](https://preferdatachallenge.nl/#important-dates)) for leaderboard submission deadlines.
+2. **Choosing the main script to work with**: go to ```submission.py``` (Python) or ```submission.R``` (R) depending on your preferred programming language. 
+
+3. **Preprocessing the data**: any steps to clean or preprocess the training data (`PreFer_train_data.csv`) needs to be documented within the function ```clean_df``` in the `submission.py` / `submission.R` script (depending on your preferred programming language). *Note*: The function ```clean_df``` will also be applied to the holdout data when you submit your model. 
+
+4. **Train, tune, and save your model**: any steps to train your model need to be documented (e.g., code for the model, number of folds, set seed) within the  `training.py` / `training.R` script. The only function in this script is `run_save_model` in which you can put the steps needed to run the model. The output of this script is your saved model, either ```model.joblib``` or  ```model.rds```. Make sure that your model is saved in the same folder as `submission.py`/`submission.R` under the name `model.joblib` (for Python) or `model.rds` (for R). The model will be applied to the holdout data when you submit your model. 
+
+5. **Test your model on fake data**: you can test your ```clean_df``` function and your model (stored in:  ```model.joblib```/```model.rds```) on fake data (`PreFer_fake_data.csv`) through the function ```predict_outcomes```. You will also need to adapt this function such that the outputs of your model are predicted classes (i.e., 0s and 1s) rather than, for example, probabilities. If you passed the test (i.e.```predict_outcomes``` led to predictions rather than errors), you can submit your method. If your method does not run on the "fake data", it will not run on the holdout data. [If you "push" your method to Github this test will also be automatically run.] 
+
+6. ***Submit your method***: Submit your method as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#submit-your-method).
+  
+[Here](https://preferdatachallenge/posts) are a bunch of videos and guides, notebooks, and blogs available that guide you through this process. 
+
+### (Adding) libraries / packages
+For **Python** users: please see the ```environment.yml``` file to see which libraries are installed per default. You can add or remove libraries from this ```environment.yml``` file as you desire. It is recommended to state particular versions (i.e., `pandas=1.5` rather than `pandas>=1.5`). You have to call upon those libraries in the `submission.py` file.
+
+For **R** users: no packages are pre-installed. You can use the ```packages.R``` file and add the names of the packages to the code: ```install.packages(c("dplyr","data.table","tidyr"), repos="https://cran.r-project.org")```. You have to call upon those libraries in the `submission.R` file. (i.e., adding ```library(c("dplyr","data.table","tidyr"))```)
+
 
 ### Submit your method
 
 Follow the instructions below to submit your method:
 
-1. Make sure that you describe your model in the readme.md file in your GitHub repository and commit changes (i.e. save changes locally)
+1. Make sure that you describe your model in the `description.md` file in your GitHub repository and commit changes (i.e. save changes locally)
 2. Push the commit (i.e. upload changed version to your online repository)
-3. In GitHub make sure that the checks pass **[currently the checks do not pass, this will be fixed once the fake data is added to the repo]**:
+3. In GitHub make sure that the checks pass:
 
 ![](https://github.com/eyra/fertility-prediction-challenge/blob/master/images/Checks%20passed.png)
 
-ℹ️ If the check fails go to [FAQ](https://github.com/eyra/fertility-prediction-challenge/wiki#frequently-asked-questions), you might need to add dependencies as described [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-add-dependencies), you can also test your implementation as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-test-your-implementation).
+ℹ️ If the check fails go to [FAQ](https://github.com/eyra/fertility-prediction-challenge/wiki#frequently-asked-questions). You might need to add dependencies as described [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-add-dependencies). You can also test your implementation locally as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-test-your-implementation).
 
 4. On the main page of your repository, above the file list, click commits to view a list of commits, as described [here](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits#about-commit-branches-and-tag-labels)
 5. Go to the commit that you want to submit and right click on view commit details, then click "Copy Link Address", see example below:
@@ -67,6 +60,9 @@ Follow the instructions below to submit your method:
 
 The [LISS Panel](https://www.centerdata.nl/en/liss-panel) challenge data is separated into an example dataset for tuning your method and a holdout dataset that will be used to validate your method performance. After [submission](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-submit-your-method) your method will be run on the holdout data. Your performance scores on the holdout data will be added to the leaderboards, so your scores can be compared to the performance scores of other methods.
 
+ℹ️ Leaderboards are generated at fixed time points, check out ([important dates](https://preferdatachallenge.nl/#important-dates)) for leaderboard submission deadlines. 
+
+
 The following leaderboards will be available:
 
 - [F1](https://www.educative.io/answers/what-is-the-f1-score)\*
@@ -78,7 +74,17 @@ The following leaderboards will be available:
 
 For this challenge the F1 leaderboard is the main leaderboard.
 
-ℹ️ The Python code to calculate the metric scores used to create the challenge leaderboards are included in this repo. You can separate the challenge training data into a training and test set and use the ```score(prediction_path, ground_truth_path, output)``` function in ```run.py``` to determine your method performance scores on the training data.
+ℹ️ The Python code to calculate the metric scores used to create the challenge leaderboards are included in this repo. You can evaluate your own predictions using the ```score(prediction_path, ground_truth_path, output)``` function in ```run.py``` to determine your method performance scores on the training data.**HOW CAN R USERS DO THIS EXACTLY?**
+
+## Some further information on PreFer
+
+ℹ️ Check out ([important dates](https://preferdatachallenge.nl/#important-dates)) to see when this challenge phase will open and close.
+
+### Research problem
+Accurate predictions of the number and timing of children are crucial for effective resource allocation in society. However, despite many studies in the social sciences, we have no clear understanding of which factors are most important for fertility prediction or how well we are able to predict fertility behaviour.
+
+### Purpose statement
+To gain insight into how well methods are able to predict fertility within a three year period (2021-2023), based on survey data from previous years (2007-2020) of people in the [LISS Panel](https://www.centerdata.nl/en/liss-panel) who were aged 18-45 in 2020. The LISS Panel is a representative online longitudinal panel of Dutch households.
 
 ## License
 
