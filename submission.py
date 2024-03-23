@@ -28,8 +28,8 @@ def clean_df(df, background=None):
     # If no cleaning is done (e.g. if all the cleaning is done in a pipeline) leave only the "return df" command
 
     Parameters:
-    df (pd.DataFrame): The input dataframe containing the raw data (from PreFer_train_data.csv).
-    background (pd.DataFrame): Optional input dataframe containing background data (from PreFer_train_background_data.csv).
+    df (pd.DataFrame): The input dataframe containing the raw data (PreFer data).
+    background (pd.DataFrame): Optional input dataframe containing background data (PreFer background data).
 
     Returns:
     pd.DataFrame: The cleaned dataframe with only the necessary columns and processed variables.
