@@ -39,7 +39,15 @@ jobs:
           load: true
 
       - name: Run prediction
-        run: docker run --rm -v "$(pwd)/data:/data" eyra-rank:latest predict /data/fake_data.csv --out=/data/predictions.csv
+        run: docker run --rm -v "$(pwd)/.:/data" eyra-rank:latest /data/PreFer_fake_data.csv /data/PreFer_fake_background_data.csv --out=/data/predictions.csv
+
+      - name: Build Docker scoring image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: python.Dockerfile
+          tags: eyra-rank:scoring
+          load: true
 
       - name: Run scoring
-        run: docker run --rm -v "$(pwd)/data:/data" eyra-rank:latest score /data/predictions.csv /data/fake_data_ground_truth.csv
+        run: docker run --rm -v "$(pwd):/data" --entrypoint conda eyra-rank:scoring run -n eyra-rank python /app/score.py /data/predictions.csv /data/PreFer_fake_data.csv

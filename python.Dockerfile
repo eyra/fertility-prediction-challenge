@@ -4,10 +4,11 @@ COPY environment.yml /
 RUN conda env create -f /environment.yml
 
 RUN mkdir /app
+WORKDIR /app
 
-COPY data /data
-COPY *.py /
-COPY *.joblib /
+COPY *.csv /app
+COPY *.py /app
+COPY *.joblib /app
 
-ENTRYPOINT ["conda", "run", "-n", "eyra-rank", "python", "/run.py"]
+ENTRYPOINT ["conda", "run", "-n", "eyra-rank", "python", "/app/run.py"]
 CMD ["predict", "/data/fake_data.csv"]

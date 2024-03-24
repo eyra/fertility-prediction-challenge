@@ -16,7 +16,7 @@
 # List your packages here. Don't forget to update packages.R!
 library(dplyr) # as an example, not used here
 
-clean_df <- function(df, background = NULL){
+clean_df <- function(df, background_df){
   # Preprocess the input dataframe to feed the model.
   ### If no cleaning is done (e.g. if all the cleaning is done in a pipeline) leave only the "return df" command
 
@@ -45,7 +45,7 @@ clean_df <- function(df, background = NULL){
   return(df)
 }
 
-predict_outcomes <- function(df, model_path = "./model.rds"){
+predict_outcomes <- function(df, background_df = NULL, model_path = "./model.rds"){
   # Generate predictions using the saved model and the input dataframe.
     
   # The predict_outcomes function accepts a dataframe as an argument
@@ -58,7 +58,8 @@ predict_outcomes <- function(df, model_path = "./model.rds"){
   # they did.
   
   # Parameters:
-  # df (dataframe): The input dataframe for which predictions are to be made.
+  # df (dataframe): The data dataframe for which predictions are to be made.
+  # df (dataframe): The background data dataframe for which predictions are to be made.
   # model_path (str): The path to the saved model file (which is the output of training.R).
 
   # Returns:
@@ -73,7 +74,7 @@ predict_outcomes <- function(df, model_path = "./model.rds"){
   model <- readRDS(model_path)
     
   # Preprocess the fake / holdout data
-  df <- clean_df(df)
+  df <- clean_df(df, background_df)
 
   # IMPORTANT: the outcome `new_child` should NOT be in the data from this point onwards
   # get list of variables *without* the outcome:
@@ -87,9 +88,9 @@ predict_outcomes <- function(df, model_path = "./model.rds"){
   predictions <- ifelse(predictions > 0.5, 1, 0)  
   
   # Output file should be data.frame with two columns, nomem_enc and predictions
-  df_predict <- data.frame("nomem_encr" = df[ , "nomem_encr" ], "predictions" = predictions)
+  df_predict <- data.frame("nomem_encr" = df[ , "nomem_encr" ], "prediction" = predictions)
   # Force columnnames (overrides names that may be given by `predict`)
-  names(df_predict) <- c("nomem_encr", "predictions") 
+  names(df_predict) <- c("nomem_encr", "prediction") 
   
   # Return only dataset with predictions and identifier
   return( df_predict )
