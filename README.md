@@ -1,6 +1,6 @@
 # Fertility Prediction Data Challenge (PreFer)
 
-This is a template repository to submit your method on the Next platform for phase 1 of the Fertility Prediction Challenge ([PreFer](https://preferdatachallenge.nl)). [Here](https://preferdatachallenge.nl/#how-to-participate) you can read how to participate in the challenge. The challenge is to predict whether an individual will have a child within a three year period (2021-2023), based on survey data from previous years (2007-2020). Data come from the [LISS Panel](https://www.centerdata.nl/en/liss-panel). For more information, on the data challenge, please visit the [website](https://preferdatachallenge.nl) and read [this paper](https://arxiv.org/abs/2402.00705).
+This is a template repository to submit your method on the Next platform for phase 1 of the Fertility Prediction Challenge ([PreFer](https://preferdatachallenge.nl)). [Here](https://preferdatachallenge.nl/#how-to-participate) you can read how to participate in the challenge. The challenge is to predict whether an individual will have a child within a three year period (2021-2023), based on survey data from previous years (2007-2020). Data come from the [LISS panel](https://www.centerdata.nl/en/liss-panel). For more information, on the data challenge, please visit the [website](https://preferdatachallenge.nl) and read [this paper](https://arxiv.org/abs/2402.00705).
 
 ℹ️ Check out ([important dates](https://preferdatachallenge.nl/#important-dates)) to see when this challenge phase will open and close.
 
@@ -57,7 +57,7 @@ Follow the instructions below to submit your method:
 
 ## Leaderboards
 
-The [LISS Panel](https://www.centerdata.nl/en/liss-panel) challenge data is separated into an example dataset for tuning your method and a holdout dataset that will be used to validate your method performance. After [submission](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-submit-your-method) your method will be run on the holdout data. Your performance scores on the holdout data will be added to the leaderboards, so your scores can be compared to the performance scores of other methods.
+The [LISS panel](https://www.centerdata.nl/en/liss-panel) challenge data is separated into an example dataset for tuning your method and a holdout dataset that will be used to validate your method performance. After [submission](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-submit-your-method) your method will be run on the holdout data. Your performance scores on the holdout data will be added to the leaderboards, so your scores can be compared to the performance scores of other methods.
 
 ℹ️ Leaderboards are generated at fixed time points, check out ([important dates](https://preferdatachallenge.nl/#important-dates)) for leaderboard submission deadlines. 
 
@@ -81,7 +81,7 @@ For this challenge the F1 leaderboard is the main leaderboard.
 Accurate predictions of the number and timing of children are crucial for effective resource allocation in society. However, despite many studies in the social sciences, we have no clear understanding of which factors are most important for fertility prediction or how well we are able to predict fertility behaviour.
 
 ### Purpose statement
-To gain insight into how well methods are able to predict fertility within a three year period (2021-2023), based on survey data from previous years (2007-2020) of people in the [LISS Panel](https://www.centerdata.nl/en/liss-panel) who were aged 18-45 in 2020. The LISS Panel is a representative online longitudinal panel of Dutch households.
+To gain insight into how well methods are able to predict fertility within a three year period (2021-2023), based on survey data from previous years (2007-2020) of people in the [LISS panel](https://www.centerdata.nl/en/liss-panel) who were aged 18-45 in 2020. The LISS panel is a representative online longitudinal panel of Dutch households.
 
 ## License
 
