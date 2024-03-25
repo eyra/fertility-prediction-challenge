@@ -16,13 +16,13 @@
 # List your packages here. Don't forget to update packages.R!
 library(dplyr) # as an example, not used here
 
-clean_df <- function(df, background_df=NULL){
+clean_df <- function(df, background_df = NULL){
   # Preprocess the input dataframe to feed the model.
   ### If no cleaning is done (e.g. if all the cleaning is done in a pipeline) leave only the "return df" command
 
   # Parameters:
-  # df (dataframe): The input dataframe containing the raw data (from PreFer_train_data.csv).
-  # background (dataframe): Optional input dataframe containing background data (from PreFer_train_background_data.csv).
+  # df (dataframe): The input dataframe containing the raw data (e.g., from PreFer_train_data.csv or PreFer_fake_data.csv).
+  # background (dataframe): Optional input dataframe containing background data (e.g., from PreFer_train_background_data.csv or PreFer_fake_background_data.csv).
 
   # Returns:
   # data frame: The cleaned dataframe with only the necessary columns and processed variables.
@@ -31,13 +31,9 @@ clean_df <- function(df, background_df=NULL){
   # Create new age variable
   df$age <- 2024 - df$birthyear_bg
 
-  # Filter cases for whom outcome is not available
-  df <- df[ !is.na(df$new_child), ]
-  
   # Selecting variables for modelling
   keepcols = c('nomem_encr', # ID variable required for predictions,
-               'age',        # newly created variable
-               'new_child')  # outcome variable 
+               'age')        # newly created variable
   
   ## Keeping data with variables selected
   df <- df[ , keepcols ]
@@ -59,7 +55,7 @@ predict_outcomes <- function(df, background_df = NULL, model_path = "./model.rds
   
   # Parameters:
   # df (dataframe): The data dataframe for which predictions are to be made.
-  # df (dataframe): The background data dataframe for which predictions are to be made.
+  # background_df (dataframe): The background data dataframe for which predictions are to be made.
   # model_path (str): The path to the saved model file (which is the output of training.R).
 
   # Returns:
@@ -76,18 +72,18 @@ predict_outcomes <- function(df, background_df = NULL, model_path = "./model.rds
   # Preprocess the fake / holdout data
   df <- clean_df(df, background_df)
 
-  # IMPORTANT: the outcome `new_child` should NOT be in the data from this point onwards
-  # get list of variables *without* the outcome:
-  vars_without_outcome <- colnames(df)[colnames(df) != "new_child"]
+  # Exclude the variable nomem_encr if this variable is NOT in your model
+  vars_without_id <- colnames(df)[colnames(df) != "nomem_encr"]
   
-  # Generate predictions from model, should be 0 (no child) or 1 (had child)
+  # Generate predictions from model
   predictions <- predict(model, 
-                         subset(df, select = vars_without_outcome), 
+                         subset(df, select = vars_without_id), 
                          type = "response") 
-  # Transform probabilities into predicted classes
+  
+  # Create predictions that should be 0s and 1s rather than, e.g., probabilities
   predictions <- ifelse(predictions > 0.5, 1, 0)  
   
-  # Output file should be data.frame with two columns, nomem_enc and predictions
+  # Output file should be data.frame with two columns, nomem_encr and predictions
   df_predict <- data.frame("nomem_encr" = df[ , "nomem_encr" ], "prediction" = predictions)
   # Force columnnames (overrides names that may be given by `predict`)
   names(df_predict) <- c("nomem_encr", "prediction") 
