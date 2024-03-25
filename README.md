@@ -1,14 +1,14 @@
 # Fertility Prediction Data Challenge (PreFer)
 
-This is a template repository to submit your method for phase 1 of the Fertility Prediction Challenge ([PreFer](https://preferdatachallenge.nl)). [Here](https://preferdatachallenge.nl/#how-to-participate) you can read how to participate in the challenge. The challenge is to predict whether an individual will have a child within a three year period (2021-2023), based on survey data from previous years (2007-2020). Data come from the [LISS Panel](https://www.centerdata.nl/en/liss-panel). For more information, on the data challenge, please visit the [website](https://preferdatachallenge.nl) and read [this paper](https://arxiv.org/abs/2402.00705).
+This is a template repository to submit your method on the Next platform for phase 1 of the Fertility Prediction Challenge ([PreFer](https://preferdatachallenge.nl)). [Here](https://preferdatachallenge.nl/#how-to-participate) you can read how to participate in the challenge. The challenge is to predict whether an individual will have a child within a three year period (2021-2023), based on survey data from previous years (2007-2020). Data come from the [LISS Panel](https://www.centerdata.nl/en/liss-panel). For more information, on the data challenge, please visit the [website](https://preferdatachallenge.nl) and read [this paper](https://arxiv.org/abs/2402.00705).
 
 ℹ️ Check out ([important dates](https://preferdatachallenge.nl/#important-dates)) to see when this challenge phase will open and close.
 
 ## Prerequisites
 
 1. Make a copy of [this](https://github.com/eyra/fertility-prediction-challenge) template repository, by forking and cloning as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-fork-and-clone-this-repository).
-2. If you have [registered](https://preferdatachallenge.nl/details/overview/3application.html) for the PreFer challenge, you will receive a link to download the data from the [Next platform](PLACEHOLDER).
-3. Visit the [Next platform](LINK) and sign in to download the training data and codebooks. [Here](https://preferdatachallenge.nl/posts/posts/2024-03-20-prefer-datasets.html) is a detailed explanation of the datasets that you have downloaded, and [here](https://preferdatachallenge.nl/posts/posts/2024-03-21-prefer-codebooks.html) for an explanation of how to use the codebooks. 
+2. If you have [registered](https://preferdatachallenge.nl/details/overview/3application.html) for the PreFer challenge, you will receive a link to download the data from the Next platform.
+3. Visit the Next platform and sign in to download the training data and codebooks. [Here](https://preferdatachallenge.nl/posts/posts/2024-03-20-prefer-datasets.html) is a detailed explanation of the datasets that you have downloaded, and [here](https://preferdatachallenge.nl/posts/posts/2024-03-21-prefer-codebooks.html) for an explanation of how to use the codebooks. 
 
 ## Prepare your method
 
