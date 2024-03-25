@@ -16,11 +16,11 @@ To participate in the challenge you need to submit a method (i.e. code for data 
 
 ℹ️ You can use either Python or R for your method. By default, Python is used. For Python this repo assumes that your method uses the [Anaconda](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html) Python distribution.
 
-1. **Choosing your programming language**: the default set-up is Python, if you would like to use R, go to ```settings.json``` and change ```{"dockerfile": "python.Dockerfile"}``` into ```{"dockerfile": "r.Dockerfile"}```. Read [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-update-files-in-your-forked-repository) how to update files in your forked repository. 
+1. **Choose your programming language**: the default set-up is Python, if you would like to use R, go to ```settings.json``` and change ```{"dockerfile": "python.Dockerfile"}``` into ```{"dockerfile": "r.Dockerfile"}```. Read [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-update-files-in-your-forked-repository) how to update files in your forked repository. 
 
-2. **Choosing the main script to work with**: go to ```submission.py``` (Python) or ```submission.R``` (R) depending on your preferred programming language. 
+2. **Choose the main script to work with**: go to ```submission.py``` (Python) or ```submission.R``` (R) depending on your preferred programming language. 
 
-3. **Preprocessing the data**: any steps to clean or preprocess the training data (`PreFer_train_data.csv`) needs to be documented within the function ```clean_df``` in the `submission.py` / `submission.R` script (depending on your preferred programming language). *Note*: The function ```clean_df``` will also be applied to the holdout data when you submit your model. 
+3. **Preprocess the data**: any steps to clean or preprocess the training data (`PreFer_train_data.csv`) needs to be documented within the function ```clean_df``` in the `submission.py` / `submission.R` script (depending on your preferred programming language). *Note*: The function ```clean_df``` will also be applied to the holdout data when you submit your model. 
 
 4. **Train, tune, and save your model**: any steps to train your model need to be documented (e.g., code for the model, number of folds, set seed) within the  `training.py` / `training.R` script. The only function in this script is `run_save_model` in which you can put the steps needed to run the model. The output of this script is your saved model, either ```model.joblib``` or  ```model.rds```. Make sure that your model is saved in the same folder as `submission.py`/`submission.R` under the name `model.joblib` (for Python) or `model.rds` (for R). The model will be applied to the holdout data when you submit your model. 
 
