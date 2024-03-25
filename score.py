@@ -1,17 +1,15 @@
 """
-This script calls submission.py. Add your method to submission.py to run your
-prediction method.
+This script is used to calculate the metrics on the challenge leaderboards.
 
-To test your submission use the following command:
+It can be used with the following command:
 
-python run.py predict 
+python score.py score 
 
 For example:
 
-python run.py predict data/PreFer_fake_data.csv
+python score.py score PreFer_fake_data_predictions.csv PreFer_fake_data_outcome.csv
 
-Optionally, you can use the score function to calculate evaluation scores given 
-your predictions and the ground truth within the training dataset.
+Note: The ground truth (outcome) needs to be in a seperate file with two columns (nomem_encr, new_child)
 
 """
 
