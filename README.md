@@ -1,6 +1,6 @@
 # Predicting Fertility Data Challenge (PreFer)
 
-This is a template repository to submit your method on the Next platform for phase 1 of the Fertility Prediction Challenge ([PreFer](https://preferdatachallenge.nl)). [Here](https://preferdatachallenge.nl/#how-to-participate) you can read how to participate in the challenge. The challenge is to predict whether an individual will have a child within a three year period (2021-2023), based on survey data from previous years (2007-2020). Data come from the [LISS panel](https://www.centerdata.nl/en/liss-panel). For more information, on the data challenge, please visit the [website](https://preferdatachallenge.nl) and read [this paper](https://arxiv.org/abs/2402.00705).
+This is a template repository to submit your method on the Next platform for phase 1 of the Predicting Fertility Data Challenge ([PreFer](https://preferdatachallenge.nl)). [Here](https://preferdatachallenge.nl/#how-to-participate) you can read how to participate in the challenge. The challenge is to predict whether an individual will have a child within a three year period (2021-2023), based on survey data from previous years (2007-2020). Data come from the [LISS panel](https://www.centerdata.nl/en/liss-panel). For more information, on the data challenge, please visit the [website](https://preferdatachallenge.nl) and read [this paper](https://arxiv.org/abs/2402.00705).
 
 ℹ️ Check out ([important dates](https://preferdatachallenge.nl/#important-dates)) to see when this challenge phase will open and close.
 
