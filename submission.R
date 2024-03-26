@@ -16,7 +16,7 @@
 # List your packages here. Don't forget to update packages.R!
 library(dplyr) # as an example, not used here
 
-clean_df <- function(df, background_df=NULL){
+clean_df <- function(df, background_df = NULL){
   # Preprocess the input dataframe to feed the model.
   ### If no cleaning is done (e.g. if all the cleaning is done in a pipeline) leave only the "return df" command
 
@@ -35,9 +35,9 @@ clean_df <- function(df, background_df=NULL){
   df <- df[ !is.na(df$new_child), ]
   
   # Selecting variables for modelling
-  keepcols = c('nomem_encr', # ID variable required for predictions,
-               'age',        # newly created variable
-               'new_child')  # outcome variable 
+  keepcols <- c('nomem_encr', # ID variable required for predictions,
+                'age',        # newly created variable
+                'new_child')  # outcome variable 
   
   ## Keeping data with variables selected
   df <- df[ , keepcols ]
