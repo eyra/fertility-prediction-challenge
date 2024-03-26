@@ -32,6 +32,7 @@ clean_df <- function(df, background_df = NULL){
   df$age <- 2024 - df$birthyear_bg
 
   # Selecting variables for modelling
+
   keepcols = c('nomem_encr', # ID variable required for predictions,
                'age')        # newly created variable
   
