@@ -59,7 +59,7 @@ predict_outcomes <- function(df, background_df = NULL, model_path = "./model.rds
   
   # Parameters:
   # df (dataframe): The data dataframe for which predictions are to be made.
-  # df (dataframe): The background data dataframe for which predictions are to be made.
+  # background_df (dataframe): The background data dataframe for which predictions are to be made.
   # model_path (str): The path to the saved model file (which is the output of training.R).
 
   # Returns:
