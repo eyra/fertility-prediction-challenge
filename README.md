@@ -7,8 +7,9 @@ This is a template repository to submit your method on the Next platform for pha
 ## Prerequisites
 
 1. Make a copy of [this](https://github.com/eyra/fertility-prediction-challenge) template repository, by forking and cloning as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-fork-and-clone-this-repository).
-2. If you have [registered](https://preferdatachallenge.nl/details/overview/3application.html) for the PreFer challenge, you will receive a link to download the data from the Next platform.
-3. Visit the Next platform and sign in to download the training data and codebooks. [Here](https://preferdatachallenge.nl/posts/posts/2024-03-20-prefer-datasets.html) is a detailed explanation of the datasets that you have downloaded, and [here](https://preferdatachallenge.nl/posts/posts/2024-03-21-prefer-codebooks.html) for an explanation of how to use the codebooks. 
+2. Make sure to allow Github Actions on your own repository: Go to the “Actions” tab and click “I understand my workflows, go ahead and enable them.”
+3. If you have [registered](https://preferdatachallenge.nl/details/overview/3application.html) for the PreFer challenge, you will receive a link to download the data from the Next platform.
+4. Visit the Next platform and sign in to download the training data and codebooks. [Here](https://preferdatachallenge.nl/posts/posts/2024-03-20-prefer-datasets.html) is a detailed explanation of the datasets that you have downloaded, and [here](https://preferdatachallenge.nl/posts/posts/2024-03-21-prefer-codebooks.html) for an explanation of how to use the codebooks. 
 
 ## Prepare your method
 
@@ -20,7 +21,7 @@ To participate in the challenge you need to submit a method (i.e. code for data 
 
 2. **Choose the main script to work with**: go to ```submission.py``` (Python) or ```submission.R``` (R) depending on your preferred programming language. 
 
-3. **Preprocess the data**: any steps to clean or preprocess the data need to be documented within the function ```clean_df``` in the `submission.py` / `submission.R` script (depending on your preferred programming language). *Note*: The function ```clean_df``` will also be applied to the holdout data when you submit your model. 
+3. **Preprocess the data**: any steps to clean or preprocess the data need to be documented within the function ```clean_df``` in the `submission.py` / `submission.R` script (depending on your preferred programming language). *Note*: The function ```clean_df``` will also be applied to the holdout data when you submit your model. At this point, the [codebooks](https://preferdatachallenge.nl/posts/posts/2024-03-21-prefer-codebooks.html) can be useful to make sense of the data.
 
 4. **Train, tune, and save your model**: any steps to train your model need to be documented (e.g., code for the model, number of folds, set seed) within the  `training.py` / `training.R` script. The only function in this script is `run_save_model` in which you can put the steps needed to run the model. The output of this script is your saved model, either ```model.joblib``` or  ```model.rds```. Make sure that your model is saved in the same folder as `submission.py`/`submission.R` under the name `model.joblib` (for Python) or `model.rds` (for R). The model will be applied to the holdout data when you submit your model. 
 
