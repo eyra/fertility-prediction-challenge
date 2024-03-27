@@ -4,7 +4,7 @@
 # Add your method there.
 
 # To test your submission use the following command: 
-# Rscript run.R predict data/PreFer_fake_data.csv
+# Rscript run.R PreFer_fake_data.csv PreFer_fake_background_data.csv
 
 # Install required packages with Rscript packages.R
 
