@@ -22,6 +22,9 @@ def train_save_model(cleaned_df, outcome_df):
     
     # Combine cleaned_df and outcome_df
     model_df = pd.merge(cleaned_df, outcome_df, on="nomem_encr")
+
+    # Filter cases for whom the outcome is not available
+    model_df = model_df[~model_df['new_child'].isna()]  
     
     # Logistic regression model
     model = LogisticRegression()
