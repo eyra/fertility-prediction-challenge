@@ -6,7 +6,7 @@
 # It is important to document your training steps here, including seed, 
 # number of folds, model, et cetera
 
-train_save_model <- function(clean_df, outcome_df) {
+train_save_model <- function(cleaned_df, outcome_df) {
   # Trains a model using the cleaned dataframe and saves the model to a file.
 
   # Parameters:
@@ -17,7 +17,7 @@ train_save_model <- function(clean_df, outcome_df) {
   set.seed(1) # not useful here because logistic regression deterministic
   
   # Combine cleaned_df and outcome_df
-  model_df <- merge(clean_df, outcome_df, by = "nomem_encr")
+  model_df <- merge(cleaned_df, outcome_df, by = "nomem_encr")
   
   # Logistic regression model
   model <- glm(new_child ~ age, family = "binomial", data = model_df)
