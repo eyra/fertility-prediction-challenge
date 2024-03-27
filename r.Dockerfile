@@ -1,11 +1,11 @@
 FROM r-base:4.3.3
 
+RUN mkdir /app
+WORKDIR /app
 
-COPY data /data
-COPY *.R /
-COPY *.rds /
+COPY *.R /app
+COPY *.rds /app
 
 RUN Rscript packages.R
 
 ENTRYPOINT ["Rscript", "run.R"]
-CMD ["predict", "/data/fake_data.csv"]
