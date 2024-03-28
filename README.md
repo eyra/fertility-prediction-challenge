@@ -8,7 +8,7 @@ This is a template repository to submit your method on the Next platform for pha
 
 1. Make a copy of [this](https://github.com/eyra/fertility-prediction-challenge) template repository, by forking and cloning as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-fork-and-clone-this-repository).
 2. Make sure to allow Github Actions on your own repository: Go to the “Actions” tab and click “I understand my workflows, go ahead and enable them.”
-3. If you have [registered](https://preferdatachallenge.nl/details/overview/3application.html) for the PreFer challenge, you will receive a link to download the data from the Next platform.
+3. If you have [registered](https://preferdatachallenge.nl/details/overview/3application.html) for the PreFer challenge, you will receive a link to download the data from the Next platform. **Important**: you cannot share these datasets, and you **cannot** upload them to your Github repository!
 4. Visit the Next platform and sign in to download the training data and codebooks. [Here](https://preferdatachallenge.nl/posts/posts/2024-03-20-prefer-datasets.html) is a detailed explanation of the datasets that you have downloaded, and [here](https://preferdatachallenge.nl/posts/posts/2024-03-21-prefer-codebooks.html) for an explanation of how to use the codebooks. 
 
 ## Prepare your method
@@ -42,7 +42,7 @@ For **R** users: no packages are pre-installed. You can use the ```packages.R```
 Follow the instructions below to submit your method:
 
 1. Make sure that you describe your model in the `description.md` file in your GitHub repository and commit changes (i.e. save changes locally)
-2. Push the commit (i.e. upload changed version to your online repository)
+2. Push the commit (i.e. upload changed version to your online repository). **Important**: make sure that you only push the relevant files and make sure that you **do not upload any of the datasets**. 
 3. In GitHub make sure that the checks pass:
 
 ![](https://github.com/eyra/fertility-prediction-challenge/blob/master/images/Checks%20passed.png)
