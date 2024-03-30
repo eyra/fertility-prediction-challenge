@@ -6,7 +6,7 @@ This is a template repository to submit your method on the Next platform for pha
 
 ## Prerequisites
 
-1. Make a copy of [this](https://github.com/eyra/fertility-prediction-challenge) template repository, by forking and cloning as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-fork-and-clone-this-repository).
+1. Make a copy of [this](https://github.com/eyra/fertility-prediction-challenge) template repository, by forking and cloning as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-fork-and-clone-this-repository). Use your own copy of the repository to prepare your method for submission as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#prepare-your-method).
 2. Make sure to allow Github Actions on your own repository: Go to the “Actions” tab and click “I understand my workflows, go ahead and enable them.”
 3. If you have not already done so, download the training data and codebooks via the "Download data" task on the Next platform. **Important**: you are not allowed to share these datasets and you **may not** upload them to your Github repository!
 
