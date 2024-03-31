@@ -8,7 +8,7 @@ This is a template repository to prepare your submission for phase 1 of the Pred
 
 1. Make a copy of [this](https://github.com/eyra/fertility-prediction-challenge) template repository, by forking and cloning as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-fork-and-clone-this-repository). Use your own copy of the repository to prepare your method for submission as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#prepare-your-method).
 2. Make sure to allow Github Actions on your own repository: Go to the “Actions” tab and click “I understand my workflows, go ahead and enable them.”
-3. If you have not already done so, download the training data and codebooks via the "Download data" task on the Next platform.❗️**Important**: you are not allowed to share these datasets and you **may not** upload them to your Github repository!
+3. If you have not already done so, download the training data and codebooks via the "Download Data" task on the Next platform.❗️**Important**: you are not allowed to share these datasets and you **may not** upload them to your Github repository!
 
 ℹ️ Click [here](https://preferdatachallenge.nl/posts/posts/2024-03-20-prefer-datasets.html) for a detailed explanation on the datasets that you have downloaded. Click [here](https://preferdatachallenge.nl/posts/posts/2024-03-21-prefer-codebooks.html) for an explanation on how to use the codebooks. 
 
@@ -32,10 +32,10 @@ To participate in the challenge you need to submit a method (i.e. code for data 
 
 ### Submit your method
 
-Follow the instructions below to submit your method:
+Submit your method via the "Submit Method" task on the Next platform by providing a link to the repository with your method (GitHub commit URL). Follow the instructions below:
 
 1. Make sure that you describe your model in the `description.md` file in your GitHub repository and commit changes (i.e. save changes locally)
-2. Push the commit (i.e. upload changed version to your online repository). **Important**: make sure that you only push the relevant files and make sure that you **do not upload any of the datasets**. 
+2. Push the commit (i.e. upload changed version to your online repository). ❗️**Important**: make sure that you only push the relevant files and make sure that you **do not upload any of the datasets**. 
 3. In GitHub make sure that the checks pass:
 
 ![](https://github.com/eyra/fertility-prediction-challenge/blob/master/images/Checks%20passed.png)
