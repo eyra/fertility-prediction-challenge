@@ -32,7 +32,7 @@ To participate in the challenge you need to submit a method using this repositor
 
 5. **Test your model on fake data**: you can test your ```clean_df``` function and your model (stored in:  ```model.joblib```/```model.rds```) on the fake data (`PreFer_fake_data.csv`) with the ```predict_outcomes``` function. The the ```predict_outcomes``` function in `submission.py`/`submission.R` will be run on the holdout data to generate your challenge submission result on the leaderboard. Make sure that the outputs of your model are predicted classes (i.e. 0s and 1s) rather than, for example, probabilities and to add or edit dependencies when required as described [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-add-or-edit-dependencies-librariespackages). If your method does not run on the "fake data", it will not run on the holdout data. If you passed the test (i.e.```predict_outcomes``` led to predictions rather than errors), you can start [submitting your method](https://github.com/eyra/fertility-prediction-challenge/tree/master#submit-your-method). 
   
-ℹ️ Check out [this website](https://preferdatachallenge/posts) for videos, guides, notebooks, and blogs to guide you through this process. 
+ℹ️ Check out [this website](https://preferdatachallenge.nl/posts) for guides, notebooks, and blogs to guide you through this process. 
 
 ### Submit your method
 
