@@ -1,6 +1,6 @@
 # Predicting Fertility Data Challenge (PreFer)
 
-This is a template repository to submit your method on the Next platform for phase 1 of the Predicting Fertility Data Challenge ([PreFer](https://preferdatachallenge.nl)). [Here](https://preferdatachallenge.nl/#how-to-participate) you can read how to participate in the challenge. The challenge is to predict whether an individual will have a child within a three year period (2021-2023), based on survey data from previous years (2007-2020). Data come from the [LISS panel](https://www.centerdata.nl/en/liss-panel). For more information, on the data challenge, please visit the [website](https://preferdatachallenge.nl) or read [this paper](https://arxiv.org/abs/2402.00705).
+This is a template repository to prepare your submission for phase 1 of the Predicting Fertility Data Challenge ([PreFer](https://preferdatachallenge.nl)) through the Next platform. The challenge is to predict whether an individual will have a child within a three year period (2021-2023), based on survey data from previous years (2007-2020). Data come from the [LISS panel](https://www.centerdata.nl/en/liss-panel). For more information, on the data challenge, please visit the [website](https://preferdatachallenge.nl) or read [this paper](https://arxiv.org/abs/2402.00705).
 
 ## Prerequisites
 
@@ -30,12 +30,6 @@ To participate in the challenge you need to submit a method (i.e. code for data 
   
 [Here](https://preferdatachallenge/posts) are a bunch of videos and guides, notebooks, and blogs available that guide you through this process. 
 
-### (Adding) libraries / packages
-For **Python** users: please see the ```environment.yml``` file to see which libraries are installed per default. You can add or remove libraries from this ```environment.yml``` file as you desire. It is recommended to state particular versions (i.e., `pandas=1.5` rather than `pandas>=1.5`). You have to call upon those libraries in the `submission.py` file.
-
-For **R** users: no packages are pre-installed. You can use the ```packages.R``` file and add the names of the packages to the code: ```install.packages(c("dplyr","data.table","tidyr"), repos="https://cran.r-project.org")```. You have to call upon those libraries in the `submission.R` file. (i.e., adding ```library(c("dplyr","data.table","tidyr"))```)
-
-
 ### Submit your method
 
 Follow the instructions below to submit your method:
@@ -46,7 +40,7 @@ Follow the instructions below to submit your method:
 
 ![](https://github.com/eyra/fertility-prediction-challenge/blob/master/images/Checks%20passed.png)
 
-ℹ️ If the check fails go to [FAQ](https://github.com/eyra/fertility-prediction-challenge/wiki#frequently-asked-questions). You might need to add dependencies as described [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-add-dependencies). You can also test your implementation locally as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-test-your-implementation).
+ℹ️ If the check fails go to [FAQ](https://github.com/eyra/fertility-prediction-challenge/wiki#frequently-asked-questions). You might need to add dependencies as described [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-add-or-edit-dependencies-librariespackages).
 
 4. On the main page of your repository, above the file list, click commits to view a list of commits, as described [here](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits#about-commit-branches-and-tag-labels)
 5. Go to the commit that you want to submit and right click on view commit details, then click "Copy Link Address", see example below:
