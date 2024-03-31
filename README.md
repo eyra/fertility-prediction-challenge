@@ -24,11 +24,9 @@ To participate in the challenge you need to submit a method (i.e. code for data 
 
 4. **Train, tune, and save your model**: any steps to train your model need to be documented (e.g., code for the model, number of folds, set seed) within the  `training.py` / `training.R` script. The only function in this script is `train_save_model` in which you can put the steps needed to run the model. The output of this script is your saved model, either ```model.joblib``` or  ```model.rds```. Make sure that your model is saved in the same folder as `submission.py`/`submission.R` under the name `model.joblib` (for Python) or `model.rds` (for R). The model will be applied to the holdout data when you submit your model. 
 
-5. **Test your model on fake data**: you can test your ```clean_df``` function and your model (stored in:  ```model.joblib```/```model.rds```) on fake data (`PreFer_fake_data.csv`) through the function ```predict_outcomes```. You will also need to adapt this function such that the outputs of your model are predicted classes (i.e., 0s and 1s) rather than, for example, probabilities. If you passed the test (i.e.```predict_outcomes``` led to predictions rather than errors), you can submit your method. If your method does not run on the "fake data", it will not run on the holdout data. [If you "push" your method to Github this test will also be automatically run.] 
-
-6. ***Submit your method***: Submit your method as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#submit-your-method).
+5. **Test your model on fake data**: you can test your ```clean_df``` function and your model (stored in:  ```model.joblib```/```model.rds```) on fake data (`PreFer_fake_data.csv`) through the function ```predict_outcomes```. You will also need to adapt this function such that the outputs of your model are predicted classes (i.e., 0s and 1s) rather than, for example, probabilities. Make sure to add or edit dependencies as described [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-add-or-edit-dependencies-librariespackages). If your method does not run on the "fake data", it will not run on the holdout data. If you passed the test (i.e.```predict_outcomes``` led to predictions rather than errors), you can [submit your method](https://github.com/eyra/fertility-prediction-challenge/tree/master#submit-your-method). 
   
-[Here](https://preferdatachallenge/posts) are a bunch of videos and guides, notebooks, and blogs available that guide you through this process. 
+ℹ️ Check out [this website](https://preferdatachallenge/posts) for videos, guides, notebooks, and blogs to guide you through this process. 
 
 ### Submit your method
 
