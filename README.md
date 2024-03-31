@@ -47,34 +47,6 @@ Follow the instructions below to submit your method:
 
 6. Add a submission on the Next platform by providing the URL to your GitHub commit (copied at step 5), this commit will serve as your submission to the challenge.
 
-## Leaderboards
-
-The [LISS panel](https://www.centerdata.nl/en/liss-panel) challenge data is separated into an example dataset for tuning your method and a holdout dataset that will be used to validate your method performance. After [submission](https://github.com/eyra/fertility-prediction-challenge/tree/master#how-to-submit-your-method) your method will be run on the holdout data. Your performance scores on the holdout data will be added to the leaderboards, so your scores can be compared to the performance scores of other methods.
-
-ℹ️ Leaderboards are generated at fixed time points, check out ([important dates](https://preferdatachallenge.nl/#important-dates)) for leaderboard submission deadlines. 
-
-
-The following leaderboards will be available:
-
-- [F1](https://www.educative.io/answers/what-is-the-f1-score)\*
-- [Precision](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall)\*
-- [Recall](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall)\*
-- Overall [accuracy](https://developers.google.com/machine-learning/crash-course/classification/accuracy)
-
-\*_For the prediction of having a child in 2021-2023 (positive class)_.
-
-For this challenge the F1 leaderboard is the main leaderboard.
-
-ℹ️ The Python code to calculate the metric scores used to create the challenge leaderboards is included in this repo. Check out [score.py](https://github.com/eyra/fertility-prediction-challenge/blob/master/score.py).
-
-## PreFer Challenge scope
-
-### Research problem
-Accurate predictions of the number and timing of children are crucial for effective resource allocation in society. However, despite many studies in the social sciences, we have no clear understanding of which factors are most important for fertility prediction or how well we are able to predict fertility behaviour.
-
-### Purpose statement
-To gain insight into how well methods are able to predict fertility within a three year period (2021-2023), based on survey data from previous years (2007-2020) of people in the [LISS panel](https://www.centerdata.nl/en/liss-panel) who were aged 18-45 in 2020. The LISS panel is a representative online longitudinal panel of Dutch households.
-
 ## License
 
 This project is licensed under the terms of the [MIT license](https://github.com/eyra/fertility-prediction-challenge/blob/master/LICENSE).
