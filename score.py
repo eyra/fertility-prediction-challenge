@@ -7,7 +7,7 @@ python score.py
 
 For example:
 
-python score.py PreFer_fake_data_predictions.csv PreFer_fake_data_outcome.csv
+python score.py PreFer_fake_data_predictions.csv PreFer_fake_outcome.csv
 
 Note: The ground truth (outcome) needs to be in a seperate file with two columns (nomem_encr, new_child)
 
