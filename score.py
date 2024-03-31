@@ -1,5 +1,5 @@
 """
-This script is used to calculate the metrics on the challenge leaderboards.
+This script is used to calculate the metrics for the challenge leaderboards.
 
 It can be used with the following command:
 
