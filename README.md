@@ -4,6 +4,12 @@ This is a template repository to prepare your submission for phase 1 of the Pred
 
 ℹ️ Check out the [Wiki](https://github.com/eyra/fertility-prediction-challenge/wiki/PreFer-Challenge-Wiki) for challenge scope, leaderboards, and frequently asked questions.  
 
+## Overall workflow
+- [Prerequisites](https://github.com/eyra/fertility-prediction-challenge#prerequisites) 
+- [Prepare your method](https://github.com/eyra/fertility-prediction-challenge#prepare-your-method) 
+- [Submit your method](https://github.com/eyra/fertility-prediction-challenge#submit-your-method
+)
+  
 ## Prerequisites
 
 1. Make a copy of [this](https://github.com/eyra/fertility-prediction-challenge) template repository, by forking and cloning as explained [here](https://github.com/eyra/fertility-prediction-challenge/wiki#how-to-fork-and-clone-this-repository). Use your own copy of the repository to prepare your method for submission as explained [here](https://github.com/eyra/fertility-prediction-challenge/tree/master#prepare-your-method).
