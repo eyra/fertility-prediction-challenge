@@ -1,4 +1,5 @@
-FROM r-base:4.3.3
+FROM rocker/r2u:22.04
+
 
 RUN mkdir /app
 WORKDIR /app
