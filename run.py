@@ -4,11 +4,11 @@ prediction method.
 
 To test your submission use the following command:
 
-python run.py predict 
+python run.py
 
 For example:
 
-python run.py predict data/PreFer_fake_data.csv
+python run.py PreFer_fake_data.csv PreFer_fake_background_data.csv
 
 Optionally, you can use the score function to calculate evaluation scores given 
 your predictions and the ground truth within the training dataset.
