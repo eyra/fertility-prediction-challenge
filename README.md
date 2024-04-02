@@ -53,7 +53,7 @@ Submit your method via the "Submit Method" task on the Next platform by providin
 
 6. Add a submission on the Next platform by providing the URL to your GitHub commit (copied at step 5), this commit will serve as your submission to the challenge.
 
-ℹ️ Leaderboards are generated at fixed time points, check out [important dates](https://preferdatachallenge.nl/#important-dates) for leaderboard submission deadlines.
+ℹ️ Leaderboards are generated at fixed time points, check out [important dates](https://preferdatachallenge.nl/#important-dates) for leaderboard submission deadlines. Check out the [Wiki](https://github.com/eyra/fertility-prediction-challenge/wiki/PreFer-Challenge-Wiki#leaderboards) for more info on the leaderboards.
 
 ## License
 
