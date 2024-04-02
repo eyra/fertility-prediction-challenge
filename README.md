@@ -34,7 +34,7 @@ To participate in the challenge you need to submit a method using this repositor
   
 ℹ️ Check out [this website](https://preferdatachallenge.nl/posts) for guides, notebooks, and blogs to guide you through this process. 
 
-### Submit your method
+## Submit your method
 
 Submit your method via the "Submit Method" task on the Next platform by providing a link to the repository with your method (GitHub commit URL). Follow the instructions below:
 
