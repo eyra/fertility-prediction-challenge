@@ -6,6 +6,7 @@ WORKDIR /app
 
 COPY *.R /app
 COPY *.rds /app
+COPY *.csv /app
 
 RUN Rscript packages.R
 
