@@ -16,31 +16,40 @@
 # List your packages here. Don't forget to update packages.R!
 library(dplyr) # as an example, not used here
 
-clean_df <- function(df, background_df = NULL){
-  # Preprocess the input dataframe to feed the model.
-  ### If no cleaning is done (e.g. if all the cleaning is done in a pipeline) leave only the "return df" command
 
-  # Parameters:
-  # df (dataframe): The input dataframe containing the raw data (e.g., from PreFer_train_data.csv or PreFer_fake_data.csv).
-  # background (dataframe): Optional input dataframe containing background data (e.g., from PreFer_train_background_data.csv or PreFer_fake_background_data.csv).
 
-  # Returns:
-  # data frame: The cleaned dataframe with only the necessary columns and processed variables.
-
-  ## This script contains a bare minimum working example
-  # Create new age variable
-  df$age <- 2024 - df$birthyear_bg
-
-  # Selecting variables for modelling
-
-  keepcols = c('nomem_encr', # ID variable required for predictions,
-               'age')        # newly created variable
+clean_df <- function(df, background_df = NULL) {
+  # Process the input data to feed the model
   
-  ## Keeping data with variables selected
+  # calculate age   
+  df$age <- 2024 - df$birthyear_bg
+  
+  # Selecting variables for modelling
+  
+  keepcols = c('nomem_encr', # ID variable required for predictions,
+               'age', 
+               'gender_bg')  # <-------- ADDED VARIABLE 'gender_bg'
+  
+  # Keeping data with variables selected
   df <- df[ , keepcols ]
-
+  
+  # turning gender into factor
+  df$gender_bg<- as.factor(df$gender_bg) # <-------- ADDED THIS
+  
   return(df)
 }
+
+
+
+#This is added
+setwd("C:/Users/tjnise/Documents/Github/fertility-prediction-challenge") # <---- provide the path here
+
+fake <- data.table::fread("PreFer_fake_data.csv",
+                          keepLeadingZeros = TRUE, # if FALSE adds zeroes to some dates
+                          data.table = FALSE)
+
+
+
 
 predict_outcomes <- function(df, background_df = NULL, model_path = "./model.rds"){
   # Generate predictions using the saved model and the input dataframe.
@@ -92,3 +101,6 @@ predict_outcomes <- function(df, background_df = NULL, model_path = "./model.rds
   # Return only dataset with predictions and identifier
   return( df_predict )
 }
+
+# apply the function to the fake data
+predict_outcomes(fake)
