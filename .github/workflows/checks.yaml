@@ -41,6 +41,13 @@ jobs:
       - name: Run prediction
         run: docker run --rm -v "$(pwd)/.:/data" eyra-rank:latest /data/PreFer_fake_data.csv /data/PreFer_fake_background_data.csv --output /data/predictions.csv
 
+      - name: Check if file exists
+        run: |
+          if [ ! -f "predictions.csv" ]; then
+            echo "Predictions file not found. Please check the logs to see what went wrong."
+            exit 1
+          fi
+
       - name: Build Docker scoring image
         uses: docker/build-push-action@v4
         with:
