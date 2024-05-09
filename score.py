@@ -83,7 +83,10 @@ def score(prediction_path, ground_truth_path, output):
     except ZeroDivisionError:
         precision = 0
 
-    recall = true_positives / n_all_positive_instances
+    try:
+        recall = true_positives / n_all_positive_instances
+    except ZeroDivisionError:
+        recall = 0
 
     try:
         f1_score = 2 * (precision * recall) / (precision + recall)
