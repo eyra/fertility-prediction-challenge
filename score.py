@@ -13,6 +13,17 @@ Note: The ground truth (outcome) needs to be in a seperate file with two columns
 
 The predictions need to be in a separate file with two columns (nomem_encr, prediction).
 
+Update from April 30:  
+Starting from the second intermediate leaderboard, we use this updated `score.py` script. 
+When calculating recall, we now take into account not only the cases when a predicted value was available (i.e., not missing) but all cases in the holdout set. 
+Specifically, in the updated script, we divide the number of true positives by the total number of positive cases in the ground truth data 
+(i.e., the number of people who actually had a new child), rather than by the sum of true positives and false negatives. 
+This change only matters if there are missing values in predictions. 
+We made this change to avoid a situation where a model makes very accurate predictions for only a small number of cases 
+(where the remaining cases were not predicted because of missing values on predictor variables), 
+yet gets the same result as a model that makes similar accurate predictions but for all cases. 
+Commented lines of code were part of our original scoring function. 
+
 """
 
 import sys
@@ -55,26 +66,28 @@ def score(prediction_path, ground_truth_path, output):
         merged_df
     )
 
-    # Calculate true positives, false positives, and false negatives
+    # Calculate true positives and false positives
     true_positives = len(
         merged_df[(merged_df["prediction"] == 1) & (merged_df["new_child"] == 1)]
     )
     false_positives = len(
         merged_df[(merged_df["prediction"] == 1) & (merged_df["new_child"] == 0)]
     )
-    false_negatives = len(
-        merged_df[(merged_df["prediction"] == 0) & (merged_df["new_child"] == 1)]
-    )
+
+    # Calculate the actual number of positive instances (N of people who actually had a new child) for calculating recall
+    n_all_positive_instances = len(merged_df[merged_df["new_child"] == 1])
 
     # Calculate precision, recall, and F1 score
     try:
         precision = true_positives / (true_positives + false_positives)
     except ZeroDivisionError:
         precision = 0
+
     try:
-        recall = true_positives / (true_positives + false_negatives)
+        recall = true_positives / n_all_positive_instances
     except ZeroDivisionError:
         recall = 0
+
     try:
         f1_score = 2 * (precision * recall) / (precision + recall)
     except ZeroDivisionError:
