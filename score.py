@@ -73,25 +73,18 @@ def score(prediction_path, ground_truth_path, output):
     false_positives = len(
         merged_df[(merged_df["prediction"] == 1) & (merged_df["new_child"] == 0)]
     )
-    #false_negatives = len(
-    #    merged_df[(merged_df["prediction"] == 0) & (merged_df["new_child"] == 1)]
-    #)
 
     # Calculate the actual number of positive instances (N of people who actually had a new child) for calculating recall
     n_all_positive_instances = len(merged_df[merged_df["new_child"] == 1])
-    
+
     # Calculate precision, recall, and F1 score
     try:
         precision = true_positives / (true_positives + false_positives)
     except ZeroDivisionError:
         precision = 0
-    #try:
-        #recall = true_positives / (true_positives + false_negatives)        
-    #except ZeroDivisionError:
-        #recall = 0
 
     recall = true_positives / n_all_positive_instances
-    
+
     try:
         f1_score = 2 * (precision * recall) / (precision + recall)
     except ZeroDivisionError:
