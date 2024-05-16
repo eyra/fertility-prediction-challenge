@@ -46,8 +46,10 @@ Submit your method via the "Submit Method" task on the Next platform by providin
 
 ℹ️ If the check fails go to [FAQ](https://github.com/eyra/fertility-prediction-challenge/wiki/PreFer-Challenge-Wiki#frequently-asked-questions). You might need to add dependencies as described [here](https://github.com/eyra/fertility-prediction-challenge/wiki/PreFer-Challenge-Wiki#how-to-add-or-edit-dependencies-librariespackages).
 
-4. On the main page of your repository, above the file list, click commits to view a list of commits, as described [here](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits#about-commit-branches-and-tag-labels)
-5. Go to the commit that you want to submit and right click on view commit details, then click "Copy Link Address", see example below:
+4. On the main page of your repository, above the file list, click "Commits" to view a list of commits. Do NOT click "N commits ahead of" (see screenshot below)
+ ![](https://github.com/eyra/fertility-prediction-challenge/blob/master/images/screenshot_commits.png)
+
+6. Go to the commit that you want to submit and right click on "view commit details", then click "Copy Link Address", see example below:
 
 ![](https://github.com/eyra/fertility-prediction-challenge/blob/master/images/Copy%20link%20to%20commit.png)
 
