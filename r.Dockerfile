@@ -1,4 +1,4 @@
-FROM rocker/r2u:22.04
+FROM rocker/r2u:26.04
 
 
 RUN mkdir /app
